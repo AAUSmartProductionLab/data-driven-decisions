@@ -14,7 +14,7 @@ This guide will describe the step-by-step process to set up the IIoT Box on the 
 
 ## More Guides and Descriptions
 
-- Node-RED Guide
-- Communication and Electrical Diagrams
-- Sensor Descriptions and Datasheets
-- Code
+- [Node-RED Guide](node-red/README.md)
+- [Communication and Electrical Diagrams](diagrams/README.md)
+- [Sensor Descriptions and Datasheets](sensors/README.md)
+- [Code](code/README.md)
