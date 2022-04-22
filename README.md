@@ -12,6 +12,8 @@ This guide will describe the step-by-step process to set up the IIoT Box on the 
 
 ## Contents of the IIoT Box
 
+The IIoT box contains a Raspberry Pi 3B/3B+ that is used for setting up the access point and for storing the data from the sensor boxes. The IIoT box comes a 7-inch touch display, which can be used for debugging and visualization purposes. The IIoT box also comes with two sensor boxes. These sensor boxes uses a Wemos D1 Mini Pro ESP8266 microcontroller for collection and sending of data from the sensors. The exact sensors and their respective datasheets can be found in the folder [Sensor Descriptions and Datasheets](sensors/README.md).
+
 ## More Guides and Descriptions
 
 - [Node-RED Guide](node-red/README.md)
