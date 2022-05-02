@@ -10,6 +10,7 @@ The Type 01 ESP Box has both an RFID reader and DHT11 connected, which are suppl
 This type utilises the ESP's built-in DeepSleep functionality, which requires that the RST pin be connected to the D0 pin, in order 
 for the ESP to wake-up without external intervention. Below can be seen the electrical diagram for the Type 01 ESP Box.
 
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 ! [Electrical Diagram of the ESP Box Type 01](diagrams/ESP Box 01.png)
 
 The below table summarises the pin connections for the Type 01:
