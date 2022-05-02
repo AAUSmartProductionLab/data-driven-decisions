@@ -10,8 +10,7 @@ The Type 01 ESP Box has both an RFID reader and DHT11 connected, which are suppl
 This type utilises the ESP's built-in DeepSleep functionality, which requires that the RST pin be connected to the D0 pin, in order 
 for the ESP to wake-up without external intervention. Below can be seen the electrical diagram for the Type 01 ESP Box.
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
-! [Electrical Diagram of the ESP Box Type 01](diagrams/ESP Box 01.png)
+![Electrical Diagram of the ESP Box Type 01](diagrams/ESP Box 01.png)
 
 The below table summarises the pin connections for the Type 01:
 
@@ -32,7 +31,7 @@ via the 3.3V and 5V pins on the ESP. The optosensor is supplied 12V via a 5V/12V
 ESP's built-in DeepSleep functionality. Below can be seen the electrical diagram for the Type 02 ESP Box.
 
 
-! [Electrical Diagram of the ESP Box Type 02](diagrams/ESP Box 02.png)
+![Electrical Diagram of the ESP Box Type 02](diagrams/ESP Box 02.png)
 
 The below table summarises the pin connections for the Type 02:
 
@@ -69,4 +68,4 @@ Finally, the pin connections for the Boost Regulator are summarised below:
 The below diagram illustrates the data flow from sensors to user, to assist in troubleshooting data-collection
 issues. 
 
-! [IIoT Box Data Flow](diagrams/Dataflow Diagram IIoT Box.png)
+![IIoT Box Data Flow](diagrams/Dataflow Diagram IIoT Box.png)
