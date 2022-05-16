@@ -14,16 +14,16 @@ for the ESP to wake-up without external intervention. Below can be seen the elec
 
 The below table summarises the pin connections for the Type 01:
 
-| ESP Pin | Colour Code |   Target   | Comment |
-|---------|-------------|------------|---------|
-| D0      |             | RST        |         |
-| Tx      |             | Tx (RFID)  |         |
-| Rx      |             | Rx (RFID)  |         |
-| 5V      |             | Vcc (RFID) |         |
-| GND     |             | GND        |         |
-| D5      |             | S (DHT11)  |         |
-| 3.3V    |             | + (DHT11)  |         |
-| GND     |             | - (DHT11)  |         |
+| ESP Pin | Conductor Colour |   Target   | Comment |
+|---------|------------------|------------|---------|
+| D0      |        ---       | RST        |  Function not currently used     |
+| Tx      |                  | Tx (RFID)  |         |
+| Rx      |                  | Rx (RFID)  |         |
+| 5V      |       Red        | Vcc (RFID) |         |
+| GND     |       Black      | GND        |         |
+| D5      |       Blue       | S (DHT11)  |         |
+| 3.3V    |       Red        | + (DHT11)  |         |
+| GND     |       Black      | - (DHT11)  |         |
 
 ### ESP Box Type 02
 The Type 02 ESP Box has an IMU and an industrial diffuse/through-beam PNP-type optosensor connected, which are supplied separately 
@@ -35,33 +35,34 @@ ESP's built-in DeepSleep functionality. Below can be seen the electrical diagram
 
 The below table summarises the pin connections for the Type 02:
 
-| ESP Pin | Colour Code |        Target        | Comment |
-|---------|-------------|----------------------|---------|
-| D0      |             | SCL (IMU)            |         |
-| D1      |             | SDA (IMU)            |         |
-| 3.3     |             | Vcc (IMU)            |         |
-| GND     |             | GND (IMU)            |         |
-| D4      |             | o1 (Optoisolator)    |         |
-| 3.3V    |             | Vcc (Optoisolator)   |         |
-| GND     |             | GND (Optoisolator)   |         |
-| 5V      |             | In+ (5V/12V Step-up) |         |
-| GND     |             | In- (5V/12V Step-up) |         |
+| ESP Pin | Conductor Colour |        Target        | Comment |
+|---------|------------------|----------------------|---------|
+| D0      |       Green      | SCL (IMU)            |         |
+| D1      |       Blue       | SDA (IMU)            |         |
+| 3.3     |       Red        | Vcc (IMU)            |         |
+| GND     |       Black      | GND (IMU)            |         |
+| D4      |       White      | o1 (Optoisolator)    |         |
+| 3.3V    |       Red        | Vcc (Optoisolator)   |         |
+| GND     |       Black      | GND (Optoisolator)   |         |
+| 5V      |       Red        | In+ (5V/12V Step-up) |         |
+| GND     |       Black      | In- (5V/12V Step-up) |         |
 
 Furthermore, the pin connections for the optoisolator board are summmarised below:
 
-| Optoisolator Pin | Colour Code |                  Target                  | Comment |
-|------------------|-------------|------------------------------------------|---------|
-| 1+               |             | Pin 4 (Optosensor)                       |         |
-| 1-               |             | Pin 3 (Optosensor)/ GND (5V/12V Step-up) |         |
+| Optoisolator Pin | Conductor Colour |                  Target                  | Comment |
+|------------------|------------------|------------------------------------------|---------|
+| 1+               |      Black       | Pin 4 (Optosensor)                       |         |
+| 1-               |      Blue        | Pin 3 (Optosensor)/ GND (5V/12V Step-up) |         |
+| 2+               |      Brown       | Pin 2 (Optosensor)                       | Function currently not in use (can be connected) |
 
 Finally, the pin connections for the Boost Regulator are summarised below:
 
-| 5V/12V Step-up Converter Pin | Colour Code |                Target                 | Comment |
-|------------------------------|-------------|---------------------------------------|---------|
-| In+                          |             | 5V (ESP)                              |         |
-| In-                          |             | GND (ESP)                             |         |
-| Out+                         |             | Pin 1 (Optosensor)                    |         |
-| Out-                         |             | Pin 3 (Optosensor)/ 1- (Optoisolator) |         |
+| 5V/12V Step-up Converter Pin | Conductor Colour |                Target                 | Comment |
+|------------------------------|------------------|---------------------------------------|---------|
+| In+                          |      Red         | 5V (ESP)                              |         |
+| In-                          |      Black       | GND (ESP)                             |         |
+| Out+                         |      White       | Pin 1 (Optosensor)                    |         |
+| Out-                         |      Blue        | Pin 3 (Optosensor)/ 1- (Optoisolator) |         |
 
 
 ## Communication Diagrams
@@ -69,3 +70,5 @@ The below diagram illustrates the data flow from sensors to user, to assist in t
 issues. 
 
 ![IIoT Box Data Flow](https://github.com/AAUSmartProductionLab/data-driven-decisions/blob/f5fb6779eec363ef93358ef505e5dab8b638c0d8/diagrams/Dataflow%20Diagram%20IIoT%20Box.png)
+
+
