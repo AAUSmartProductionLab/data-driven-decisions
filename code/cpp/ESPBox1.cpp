@@ -56,6 +56,7 @@ void connectNetwork(){
   
   WiFi.begin(ssid, password);
   WiFi.mode(WIFI_STA);
+  WiFi.hostname(espName.c_str());
  
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);

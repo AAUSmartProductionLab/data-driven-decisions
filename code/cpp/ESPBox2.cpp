@@ -31,7 +31,6 @@ unsigned long period = 2000;
 
 //Define the name of the ESP
 String espName = "ESPBox2";
-String hostname = "ESPBox2";
 
 //MQTT
 WiFiClient espClient;
@@ -48,7 +47,7 @@ void connectNetwork(){
   pinMode(13, OUTPUT); 
   Serial.begin(115200);
 
-  WiFi.hostname(hostname.c_str());
+  WiFi.hostname(espName.c_str());
   WiFi.begin(ssid, password);
   WiFi.mode(WIFI_STA);
  
