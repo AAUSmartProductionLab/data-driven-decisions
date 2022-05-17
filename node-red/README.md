@@ -19,4 +19,4 @@ Node-RED has many basic nodes for message manipulation, these nodes can sort, jo
 
 The IIoT Boxes currently has two flows implemented in Node-RED. Firstly, there is a data collection flow that sends the data from the sensors on the ESP Boxes into a localized database in the IIoT Box. Secondly, there is a visualization flow that is used to show an example of a dashboard that can be made from the data stored in the database.
 
-The data collection flow can be seen in Figure 2. 
+The data collection flow can be seen in Figure 2.
