@@ -70,7 +70,7 @@ def random_gen():
     
     return [cpu, disk, temperature]
 
-background_layout = [title_bar('IIoT Case', sg.theme_text_color('white'), sg.theme_background_color('orange')), [sg.Image(r'C:\Users\JK88UY\OneDrive - Aalborg Universitet\Dokumenter\university_projects\Learning_factory\images\iiot_box_wallpaper.png')]]
+background_layout = [title_bar('IIoT Case', sg.theme_text_color('white'), sg.theme_background_color('orange')), [sg.Image(r'C:\Users\JK88UY\OneDrive - Aalborg Universitet\Dokumenter\university_projects\Learning_factory\data-driven-decisions\code\python\iiot_box_wallpaper.png')]]
 col_layout_r = [[sg.Text('ESPBoxes:', size=(20,1), background_color='gray', font=("Consolas", 20))],
           [sg.Text('ESPBox1:', background_color='gray', font=default_font), sg.Text('10.3.141.115', background_color='gray', font=default_font, text_color='yellow', key='_ipaddr_box1_'), sg.Button('ping', button_color='gray',font=default_font, key='ping1'), LEDIndicator('_espbox1_')],
           [sg.Text('ESPBox2:', background_color='gray', font=default_font), sg.Text('10.3.141.87', background_color='gray', font=default_font, text_color='yellow', key='_ipaddr_box2_'), sg.Button('ping', button_color='gray', font=default_font, key='ping2'), LEDIndicator('_espbox2_')],
