@@ -1,0 +1,1551 @@
+[
+    {
+        "id": "9ae3b787b3ce34ed",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e9f44dd3f0da4ed8",
+        "type": "group",
+        "z": "9ae3b787b3ce34ed",
+        "name": "IMU MPU6050",
+        "style": {
+            "fill": "#ffC000",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "16e8369141f4b7e9",
+            "2ae49ebf9c7d34f1",
+            "12496d3a48112141",
+            "9ac9110c6e30c4cb",
+            "c0eaac94d26b9726",
+            "0c6e37149820dd87",
+            "36f25da69c5e0f2d",
+            "540ec11044caa9fe",
+            "11ab5d81e969e1ec",
+            "a9b9d3422aa1db36",
+            "4ee9c97cf9e39103",
+            "b6de5d55838a64c4",
+            "9567342f4afcb062",
+            "a72af00f97037d49"
+        ],
+        "x": 294,
+        "y": 419,
+        "w": 972,
+        "h": 362
+    },
+    {
+        "id": "c74b451796328ba7",
+        "type": "group",
+        "z": "9ae3b787b3ce34ed",
+        "name": "DHT11",
+        "style": {
+            "fill": "#ff3f3f",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "94a7ada3d0d8af03",
+            "e382326d2889243a",
+            "698e4ffee4d348f5",
+            "a1447f17f0cd26fb",
+            "87b7011fdad4d736",
+            "5107f0f5f588a4da",
+            "93024ce4ec890e77",
+            "7db49b8d7d6e3353",
+            "636f8722cef21913",
+            "49c4d89a39fdc766",
+            "286528b3f41574b8",
+            "2b60169ba319a981",
+            "0239a921914907da",
+            "575433341318b687"
+        ],
+        "x": 294,
+        "y": 39,
+        "w": 1052,
+        "h": 362
+    },
+    {
+        "id": "d26f64a14cd1dda5",
+        "type": "group",
+        "z": "9ae3b787b3ce34ed",
+        "name": "Linetracker SEN-KY033LT",
+        "style": {
+            "label": true,
+            "fill": "#3f93cf",
+            "color": "#000000"
+        },
+        "nodes": [
+            "8936c3b5a9ebeb7a",
+            "e4cbf7962b67bb96",
+            "939653c2589a08fe",
+            "f646b096ca967764",
+            "8da0904d35c4bccd",
+            "492ccb3ada9d0335",
+            "a52a7ff279d481cd",
+            "9093ca8f3bc997c8",
+            "075af3e39c095f63",
+            "a88b8cea6035b8a8",
+            "62f04db22289b2fe",
+            "6db8533711b363e1",
+            "c714e7c84b869e73",
+            "ee3deac09322e15a",
+            "a90074a67f29e7cf",
+            "d31826a7c84eb708"
+        ],
+        "x": 294,
+        "y": 799,
+        "w": 1292,
+        "h": 262
+    },
+    {
+        "id": "ea48297d1b0128b2",
+        "type": "group",
+        "z": "9ae3b787b3ce34ed",
+        "name": "Lightsensor PmodALS",
+        "style": {
+            "fill": "#9363b7",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "f3af4c9e923ca407",
+            "d4062b91e03a1e8a",
+            "237de022010cdd47",
+            "ccee3a707a66aabd",
+            "d58ebcb0eb7c8f91",
+            "c456091c53fdbb67",
+            "dd931df14692e515"
+        ],
+        "x": 294,
+        "y": 1079,
+        "w": 1032,
+        "h": 182
+    },
+    {
+        "id": "16e8369141f4b7e9",
+        "type": "mysql",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "mydb": "5339cbe2c181bca0",
+        "name": "Accelerometer",
+        "x": 780,
+        "y": 460,
+        "wires": [
+            [
+                "12496d3a48112141"
+            ]
+        ]
+    },
+    {
+        "id": "94a7ada3d0d8af03",
+        "type": "ui_chart",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "name": "",
+        "group": "94ab31a65164e268",
+        "order": 0,
+        "width": "21",
+        "height": "10",
+        "label": "Temperature Maskinafdeling [°C]",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": false,
+        "ymin": "15",
+        "ymax": "30",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff7b00",
+            "#aec7e8",
+            "#fff70f",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1190,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ae49ebf9c7d34f1",
+        "type": "ui_chart",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "name": "",
+        "group": "458d41af858c0a6a",
+        "order": 0,
+        "width": "21",
+        "height": "11",
+        "label": "Acceleration [m/s²]",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff0000",
+            "#00ffff",
+            "#00ff00",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1150,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12496d3a48112141",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "name": "",
+        "func": "var series = [\"X\",\"Y\", \"Z\"];\nvar msg1 = [];\nvar msg2 = [];\nvar msg3 = [];\nvar labels = [\"X-axis\", \"Y-axis\", \"Z-axis\"];\n\n\nfor(var i = 0, len = msg.payload.length; i < len; i++){\n    var tStamp = new Date(msg.payload[i].timestamp * 1000);\n    \n  msg1.push({x: tStamp, y: msg.payload[i].ax});\n  msg2.push({x: tStamp, y: msg.payload[i].ay});\n  msg3.push({x: tStamp, y: msg.payload[i].az});\n}\n\nmsg.payload = [{\"series\": series, \"data\": [msg1, msg2, msg3], \"labels\": labels}];\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 460,
+        "wires": [
+            [
+                "2ae49ebf9c7d34f1"
+            ]
+        ]
+    },
+    {
+        "id": "9ac9110c6e30c4cb",
+        "type": "mysql",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "mydb": "5339cbe2c181bca0",
+        "name": "Gyroscope",
+        "x": 790,
+        "y": 640,
+        "wires": [
+            [
+                "0c6e37149820dd87"
+            ]
+        ]
+    },
+    {
+        "id": "c0eaac94d26b9726",
+        "type": "ui_chart",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "name": "",
+        "group": "e0c6467bde0b2b53",
+        "order": 0,
+        "width": "21",
+        "height": "11",
+        "label": "Rotation [°/s]",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#fb00ff",
+            "#ffff00",
+            "#00ffff",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1130,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0c6e37149820dd87",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "name": "",
+        "func": "var series = [\"Pitch (rx)\",\"Yaw (ry)\", \"Roll (rz)\"];\nvar msg1 = [];\nvar msg2 = [];\nvar msg3 = [];\nvar labels = [\"Pitch\", \"Yaw\", \"Roll\"];\n\n\nfor(var i = 0, len = msg.payload.length; i < len; i++){\n    var tStamp = new Date(msg.payload[i].timestamp * 1000);\n    \n  msg1.push({x: tStamp, y: msg.payload[i].rx});\n  msg2.push({x: tStamp, y: msg.payload[i].ry});\n  msg3.push({x: tStamp, y: msg.payload[i].rz});\n}\n\nmsg.payload = [{\"series\": series, \"data\": [msg1, msg2, msg3], \"labels\": labels}];\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 640,
+        "wires": [
+            [
+                "c0eaac94d26b9726"
+            ]
+        ]
+    },
+    {
+        "id": "e382326d2889243a",
+        "type": "ui_chart",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "name": "",
+        "group": "82f351812248acf9",
+        "order": 0,
+        "width": "21",
+        "height": "10",
+        "label": "Humidity Maskinafdeling [%]",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": false,
+        "ymin": "20",
+        "ymax": "100",
+        "removeOlder": "1",
+        "removeOlderPoints": "3600",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#00ffff",
+            "#aec7e8",
+            "#fff70f",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1180,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "698e4ffee4d348f5",
+        "type": "mysql",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "mydb": "5339cbe2c181bca0",
+        "name": "Temperature",
+        "x": 790,
+        "y": 80,
+        "wires": [
+            [
+                "a1447f17f0cd26fb"
+            ]
+        ]
+    },
+    {
+        "id": "a1447f17f0cd26fb",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "name": "",
+        "func": "var series = [\"Temperature\"];\nvar msg1 = [];\n\nvar labels = [\"Temperature\"];\n\n\nfor(var i = 0, len = msg.payload.length; i < len; i++){\n    var tStamp = new Date(msg.payload[i].timestamp * 1000);\n    \n  msg1.push({x: tStamp, y: msg.payload[i].temperature});\n\n}\n\nmsg.payload = [{\"series\": [series], \"data\": [msg1], \"labels\": [labels]}];\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 80,
+        "wires": [
+            [
+                "94a7ada3d0d8af03"
+            ]
+        ]
+    },
+    {
+        "id": "87b7011fdad4d736",
+        "type": "mysql",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "mydb": "5339cbe2c181bca0",
+        "name": "Humidity",
+        "x": 800,
+        "y": 260,
+        "wires": [
+            [
+                "5107f0f5f588a4da"
+            ]
+        ]
+    },
+    {
+        "id": "5107f0f5f588a4da",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "name": "",
+        "func": "var series = [\"Humidity\"];\nvar msg1 = [];\n\nvar labels = [\"Humidity\"];\n\n\nfor(var i = 0, len = msg.payload.length; i < len; i++){\n    var tStamp = new Date(msg.payload[i].timestamp  * 1000);\n    \n  msg1.push({x: tStamp, y: msg.payload[i].humidity});\n}\n\nmsg.payload = [{\"series\": series, \"data\": [msg1], \"labels\": labels}];\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 260,
+        "wires": [
+            [
+                "e382326d2889243a"
+            ]
+        ]
+    },
+    {
+        "id": "8936c3b5a9ebeb7a",
+        "type": "ui_chart",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "group": "0201b189f18d3e63",
+        "order": 2,
+        "width": "8",
+        "height": "6",
+        "label": "Unit Count",
+        "chartType": "bar",
+        "legend": "true",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "1",
+        "removeOlderPoints": "3600",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ededed",
+            "#ffff00",
+            "#00ff00",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1390,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4cbf7962b67bb96",
+        "type": "mysql",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "mydb": "5339cbe2c181bca0",
+        "name": "Tracker",
+        "x": 880,
+        "y": 840,
+        "wires": [
+            [
+                "939653c2589a08fe",
+                "a88b8cea6035b8a8"
+            ]
+        ]
+    },
+    {
+        "id": "939653c2589a08fe",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "func": "var series = [\"Units Produced this Week\"];\n\nvar labels = [\" Weekly Average\",\"Yesterday\", \"Today\"];\nvar countToday = 0;\nvar countYesterday = 0;\nvar countWeek = 0;\nvar average = 0;\nvar d = new Date();\nconst currentDate = d.getTime();\n\n\nfor(var i = 0, len = msg.payload.length; i < len; i++){\n    var tStamp = new Date(msg.payload[i].timestamp * 1000);\n    if (msg.payload[i][\"status\"] == 0){\n            //if tStamp = today sum count\n        if ((tStamp.getTime() - currentDate)/86400 <= 1){\n            countToday++;\n        }\n        else if ((tStamp.getTime() - currentDate)/86400 <= 2){\n            countYesterday++;\n        }\n        if ((tStamp.getTime() - currentDate)/86400 <= 7){\n            countWeek++;\n        }\n    }\n}\n\naverage = countWeek/5;\n\nmsg.payload = [{\"series\": series, \"data\": [average, countYesterday, countToday], \"labels\": labels}];\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 840,
+        "wires": [
+            [
+                "8936c3b5a9ebeb7a",
+                "8da0904d35c4bccd",
+                "a52a7ff279d481cd"
+            ]
+        ]
+    },
+    {
+        "id": "f646b096ca967764",
+        "type": "ui_gauge",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "group": "0201b189f18d3e63",
+        "order": 5,
+        "width": "5",
+        "height": "5",
+        "gtype": "gage",
+        "title": "Today Performance",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "90",
+        "seg2": "98",
+        "className": "",
+        "x": 1410,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "8da0904d35c4bccd",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "func": "var performance = (msg.payload[0].data[2]/msg.payload[0].data[0])*100;\n\nmsg.payload = [performance];\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 900,
+        "wires": [
+            [
+                "f646b096ca967764"
+            ]
+        ]
+    },
+    {
+        "id": "492ccb3ada9d0335",
+        "type": "ui_gauge",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "group": "0201b189f18d3e63",
+        "order": 6,
+        "width": "5",
+        "height": "5",
+        "gtype": "gage",
+        "title": "Yesterday Performance",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "90",
+        "seg2": "98",
+        "className": "",
+        "x": 1430,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "a52a7ff279d481cd",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "func": "var performance = (msg.payload[0].data[1]/msg.payload[0].data[0])*100;\n\nmsg.payload = [performance];\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 960,
+        "wires": [
+            [
+                "492ccb3ada9d0335"
+            ]
+        ]
+    },
+    {
+        "id": "9093ca8f3bc997c8",
+        "type": "ui_text_input",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "label": "Planned Units",
+        "tooltip": "",
+        "group": "0201b189f18d3e63",
+        "order": 4,
+        "width": "15",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "0",
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 400,
+        "y": 1000,
+        "wires": [
+            [
+                "62f04db22289b2fe"
+            ]
+        ]
+    },
+    {
+        "id": "075af3e39c095f63",
+        "type": "ui_gauge",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "group": "0201b189f18d3e63",
+        "order": 7,
+        "width": "5",
+        "height": "5",
+        "gtype": "gage",
+        "title": "Weekly Performance (OEE)",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "90",
+        "seg2": "98",
+        "className": "",
+        "x": 1440,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "a88b8cea6035b8a8",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "func": "var countWeek = 0;\n\nvar d = new Date();\nconst currentDate = d.getTime();\n\n\nfor(var i = 0, len = msg.payload.length; i < len; i++){\n    var tStamp = new Date(msg.payload[i].timestamp * 1000);\n    if (msg.payload[i][\"status\"] == 0){\n      \n        if ((tStamp.getTime() - currentDate)/86400 <= 7){\n            countWeek++;\n        }\n    }\n}\n\n\nvar performance = (countWeek/flow.get(\"plannedUnits\"))*100;\n\nmsg.payload = [(performance).toFixed(2)];\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 1020,
+        "wires": [
+            [
+                "075af3e39c095f63"
+            ]
+        ]
+    },
+    {
+        "id": "62f04db22289b2fe",
+        "type": "switch",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "number",
+                "vt": "number"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 550,
+        "y": 1000,
+        "wires": [
+            [
+                "6db8533711b363e1"
+            ]
+        ]
+    },
+    {
+        "id": "6db8533711b363e1",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "func": "flow.set(\"plannedUnits\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3af4c9e923ca407",
+        "type": "ui_chart",
+        "z": "9ae3b787b3ce34ed",
+        "g": "ea48297d1b0128b2",
+        "name": "",
+        "group": "fbe70850f8ac52aa",
+        "order": 0,
+        "width": "21",
+        "height": "10",
+        "label": "Illuminance [lx]",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "No Data",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "255",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ffffff",
+            "#aec7e8",
+            "#fff70f",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1220,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4062b91e03a1e8a",
+        "type": "mysql",
+        "z": "9ae3b787b3ce34ed",
+        "g": "ea48297d1b0128b2",
+        "mydb": "5339cbe2c181bca0",
+        "name": "Light Sensor",
+        "x": 870,
+        "y": 1120,
+        "wires": [
+            [
+                "237de022010cdd47"
+            ]
+        ]
+    },
+    {
+        "id": "237de022010cdd47",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "ea48297d1b0128b2",
+        "name": "",
+        "func": "var series = [\"Light Intensity\"];\nvar msg1 = [];\n\nvar labels = [\"Light Intensity\"];\n\n\nfor(var i = 0, len = msg.payload.length; i < len; i++){\n    var tStamp = new Date(msg.payload[i].timestamp  * 1000);\n    \n  msg1.push({x: tStamp, y: msg.payload[i].intensity});\n}\n\nmsg.payload = [{\"series\": [series], \"data\": [msg1], \"labels\": [labels]}];\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 1120,
+        "wires": [
+            [
+                "f3af4c9e923ca407"
+            ]
+        ]
+    },
+    {
+        "id": "ccee3a707a66aabd",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "ea48297d1b0128b2",
+        "name": "",
+        "func": "var counter = flow.get(\"counter.intensity\");\n\nif (counter == 0) {\n    counter++;\n    flow.set(\"counter.intensity\", counter)\n    return msg;\n}else {\n    counter++;\n    flow.set(\"counter.intensity\", counter)\n    return;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"counter.intensity\", 0);",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1120,
+        "wires": [
+            [
+                "dd931df14692e515"
+            ]
+        ]
+    },
+    {
+        "id": "c456091c53fdbb67",
+        "type": "delay",
+        "z": "9ae3b787b3ce34ed",
+        "g": "ea48297d1b0128b2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 420,
+        "y": 1220,
+        "wires": [
+            [
+                "dd931df14692e515"
+            ]
+        ]
+    },
+    {
+        "id": "d58ebcb0eb7c8f91",
+        "type": "switch",
+        "z": "9ae3b787b3ce34ed",
+        "g": "ea48297d1b0128b2",
+        "name": "If Not Init Sig",
+        "property": "counter.intensity",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 1180,
+        "wires": [
+            [
+                "c456091c53fdbb67"
+            ]
+        ]
+    },
+    {
+        "id": "ee3deac09322e15a",
+        "type": "switch",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "If Not Init Sig",
+        "property": "counter.tracker",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 900,
+        "wires": [
+            [
+                "a90074a67f29e7cf"
+            ]
+        ]
+    },
+    {
+        "id": "c714e7c84b869e73",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "func": "var counter = flow.get(\"counter.tracker\");\n\nif (counter == 0) {\n    counter++;\n    flow.set(\"counter.tracker\", counter)\n    return msg;\n}else {\n    counter++;\n    flow.set(\"counter.tracker\", counter)\n    return;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"counter.tracker\", 0);",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 840,
+        "wires": [
+            [
+                "d31826a7c84eb708"
+            ]
+        ]
+    },
+    {
+        "id": "a90074a67f29e7cf",
+        "type": "delay",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 400,
+        "y": 940,
+        "wires": [
+            [
+                "d31826a7c84eb708"
+            ]
+        ]
+    },
+    {
+        "id": "dd931df14692e515",
+        "type": "change",
+        "z": "9ae3b787b3ce34ed",
+        "g": "ea48297d1b0128b2",
+        "name": "Query Light Sensor",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT timestamp, intensity FROM light WHERE (timestamp) >= (UNIX_TIMESTAMP() - 36000);",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 1120,
+        "wires": [
+            [
+                "d4062b91e03a1e8a"
+            ]
+        ]
+    },
+    {
+        "id": "d31826a7c84eb708",
+        "type": "change",
+        "z": "9ae3b787b3ce34ed",
+        "g": "d26f64a14cd1dda5",
+        "name": "Query Tracker",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT status, timestamp FROM tracker WHERE (timestamp) >= (UNIX_TIMESTAMP() - (3600*1));",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 840,
+        "wires": [
+            [
+                "e4cbf7962b67bb96"
+            ]
+        ]
+    },
+    {
+        "id": "11ab5d81e969e1ec",
+        "type": "delay",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "0.5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 740,
+        "wires": [
+            [
+                "a9b9d3422aa1db36"
+            ]
+        ]
+    },
+    {
+        "id": "540ec11044caa9fe",
+        "type": "switch",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "name": "If Not Init Sig",
+        "property": "counter.gyroscope",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 700,
+        "wires": [
+            [
+                "11ab5d81e969e1ec"
+            ]
+        ]
+    },
+    {
+        "id": "36f25da69c5e0f2d",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "name": "",
+        "func": "var counter = flow.get(\"counter.gyroscope\");\n\nif (counter == 0) {\n    counter++;\n    flow.set(\"counter.gyroscope\", counter)\n    return msg;\n}else {\n    counter++;\n    flow.set(\"counter.gyroscope\", counter)\n    return;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"counter.gyroscope\", 0);",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 640,
+        "wires": [
+            [
+                "a9b9d3422aa1db36"
+            ]
+        ]
+    },
+    {
+        "id": "a9b9d3422aa1db36",
+        "type": "change",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "name": "Query Gyroscope",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "SELECT timestamp, rx,ry,rz FROM imu WHERE timestamp >= (UNIX_TIMESTAMP() - (3600*1));",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 640,
+        "wires": [
+            [
+                "9ac9110c6e30c4cb"
+            ]
+        ]
+    },
+    {
+        "id": "b6de5d55838a64c4",
+        "type": "delay",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "0",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 420,
+        "y": 560,
+        "wires": [
+            [
+                "4ee9c97cf9e39103"
+            ]
+        ]
+    },
+    {
+        "id": "9567342f4afcb062",
+        "type": "switch",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "name": "If Not Init Sig",
+        "property": "counter.accelerometer",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 520,
+        "wires": [
+            [
+                "b6de5d55838a64c4"
+            ]
+        ]
+    },
+    {
+        "id": "a72af00f97037d49",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "name": "",
+        "func": "var counter = flow.get(\"counter.accelerometer\");\n\nif (counter == 0) {\n    counter++;\n    flow.set(\"counter.accelerometer\", counter)\n    return msg;\n}else {\n    counter++;\n    flow.set(\"counter.accelerometer\", counter)\n    return;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"counter.accelerometer\", 0);",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 460,
+        "wires": [
+            [
+                "4ee9c97cf9e39103"
+            ]
+        ]
+    },
+    {
+        "id": "4ee9c97cf9e39103",
+        "type": "change",
+        "z": "9ae3b787b3ce34ed",
+        "g": "e9f44dd3f0da4ed8",
+        "name": "Query Accelerometer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "select * from (select * from imu order by id desc limit 100)data order by id asc;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 460,
+        "wires": [
+            [
+                "16e8369141f4b7e9"
+            ]
+        ]
+    },
+    {
+        "id": "93024ce4ec890e77",
+        "type": "change",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "name": "Query Temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "select * from (select timestamp, temperature, id from DHT11 order by id desc limit 10000 offset 40)data order by id asc;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 80,
+        "wires": [
+            [
+                "698e4ffee4d348f5"
+            ]
+        ]
+    },
+    {
+        "id": "7db49b8d7d6e3353",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "name": "",
+        "func": "var counter = flow.get(\"counter.temperature\");\n\nif (counter == 0) {\n    counter++;\n    flow.set(\"counter.temperature\", counter)\n    return msg;\n}else {\n    counter++;\n    flow.set(\"counter.temperature\", counter)\n    return;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"counter.temperature\", 0);",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "93024ce4ec890e77"
+            ]
+        ]
+    },
+    {
+        "id": "636f8722cef21913",
+        "type": "switch",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "name": "If Not Init Sig",
+        "property": "counter.temperature",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "49c4d89a39fdc766"
+            ]
+        ]
+    },
+    {
+        "id": "49c4d89a39fdc766",
+        "type": "delay",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 420,
+        "y": 180,
+        "wires": [
+            [
+                "93024ce4ec890e77"
+            ]
+        ]
+    },
+    {
+        "id": "286528b3f41574b8",
+        "type": "change",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "name": "Query Humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "select * from (select timestamp, humidity, id from DHT11 order by id desc limit 1000)data order by id asc;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [
+                "87b7011fdad4d736"
+            ]
+        ]
+    },
+    {
+        "id": "575433341318b687",
+        "type": "delay",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2.5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "286528b3f41574b8"
+            ]
+        ]
+    },
+    {
+        "id": "0239a921914907da",
+        "type": "switch",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "name": "If Not Init Sig",
+        "property": "counter.humidity",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 320,
+        "wires": [
+            [
+                "575433341318b687"
+            ]
+        ]
+    },
+    {
+        "id": "2b60169ba319a981",
+        "type": "function",
+        "z": "9ae3b787b3ce34ed",
+        "g": "c74b451796328ba7",
+        "name": "",
+        "func": "var counter = flow.get(\"counter.humidity\");\n\nif (counter == 0) {\n    counter++;\n    flow.set(\"counter.humidity\", counter)\n    return msg;\n}else {\n    counter++;\n    flow.set(\"counter.humidity\", counter)\n    return;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"counter.humidity\", 0);",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "286528b3f41574b8"
+            ]
+        ]
+    },
+    {
+        "id": "4c33deab10ef30b9",
+        "type": "inject",
+        "z": "9ae3b787b3ce34ed",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "7db49b8d7d6e3353",
+                "2b60169ba319a981",
+                "a72af00f97037d49",
+                "36f25da69c5e0f2d",
+                "c714e7c84b869e73",
+                "ccee3a707a66aabd",
+                "0239a921914907da",
+                "636f8722cef21913",
+                "9567342f4afcb062",
+                "540ec11044caa9fe",
+                "ee3deac09322e15a",
+                "d58ebcb0eb7c8f91"
+            ]
+        ]
+    },
+    {
+        "id": "5339cbe2c181bca0",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "10.3.141.1",
+        "port": "3306",
+        "db": "iiot_case",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "94ab31a65164e268",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "227cb73b61ebbd0a",
+        "order": 3,
+        "disp": true,
+        "width": "23",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "458d41af858c0a6a",
+        "type": "ui_group",
+        "name": "Acceleration",
+        "tab": "227cb73b61ebbd0a",
+        "order": 1,
+        "disp": true,
+        "width": "23",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "e0c6467bde0b2b53",
+        "type": "ui_group",
+        "name": "Rotation",
+        "tab": "227cb73b61ebbd0a",
+        "order": 2,
+        "disp": true,
+        "width": "23",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "82f351812248acf9",
+        "type": "ui_group",
+        "name": "Humidity",
+        "tab": "227cb73b61ebbd0a",
+        "order": 5,
+        "disp": true,
+        "width": "23",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "0201b189f18d3e63",
+        "type": "ui_group",
+        "name": "Line Tracker",
+        "tab": "227cb73b61ebbd0a",
+        "order": 4,
+        "disp": true,
+        "width": "23",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "fbe70850f8ac52aa",
+        "type": "ui_group",
+        "name": "Illuminance",
+        "tab": "227cb73b61ebbd0a",
+        "order": 6,
+        "disp": true,
+        "width": "23",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "227cb73b61ebbd0a",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

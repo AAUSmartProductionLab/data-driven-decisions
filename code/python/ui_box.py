@@ -14,7 +14,7 @@ def get_scaling():
     root = sg.tk.Tk()
     scaling = root.winfo_fpixels('1i')/72
     root.destroy()
-    return scaling
+    return scaling2
 
 def title_bar(title, text_color, background_color):
     bc = background_color
@@ -51,7 +51,7 @@ def ping(hostname):
 
     Returns
     -------
-    list(str, bool)
+    list[str, bool]
         A two part message that can be unpacked into a color for display purposes and a boolean for logic purposes.
     """
     response = os.system("ping -c 1 " + hostname)

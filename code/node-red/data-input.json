@@ -1,0 +1,451 @@
+[
+    {
+        "id": "9a2390d069180de5",
+        "type": "tab",
+        "label": "Data input",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "52fb27b92c27cdac",
+        "type": "group",
+        "z": "9a2390d069180de5",
+        "name": "Collect data from ESPBox1",
+        "style": {
+            "fill": "#ff3f3f",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "dd2468b6.6d4f28",
+            "d072e0e7.5c41",
+            "b30e5479.7bdb68",
+            "2b7da3c3.b0df7c",
+            "8934af2f.fc635",
+            "5b71024c335d4885",
+            "bf90353b95d8000f",
+            "2f49927649c21897"
+        ],
+        "x": 134,
+        "y": 419,
+        "w": 932,
+        "h": 202
+    },
+    {
+        "id": "f075a0647b536203",
+        "type": "group",
+        "z": "9a2390d069180de5",
+        "name": "Collect data from ESPBox2",
+        "style": {
+            "fill": "#3f93cf",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "e5da2fe7.08c1c",
+            "f088ba00.8c8348",
+            "926f829ac7aca6ef",
+            "fc53940c85f967ad"
+        ],
+        "x": 134,
+        "y": 331,
+        "w": 732,
+        "h": 82
+    },
+    {
+        "id": "e5da2fe7.08c1c",
+        "type": "change",
+        "z": "9a2390d069180de5",
+        "g": "f075a0647b536203",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "topic",
+                "pt": "msg",
+                "from": "ESPBox2/",
+                "fromt": "str",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 372,
+        "wires": [
+            [
+                "926f829ac7aca6ef"
+            ]
+        ]
+    },
+    {
+        "id": "f088ba00.8c8348",
+        "type": "mqtt in",
+        "z": "9a2390d069180de5",
+        "g": "f075a0647b536203",
+        "name": "",
+        "topic": "ESPBox2/#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "a1b8bf4.8e82e4",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 230,
+        "y": 372,
+        "wires": [
+            [
+                "fc53940c85f967ad",
+                "4e5faf635b8781ce"
+            ]
+        ]
+    },
+    {
+        "id": "79da870994dd46f6",
+        "type": "mysql",
+        "z": "9a2390d069180de5",
+        "mydb": "5339cbe2c181bca0",
+        "name": "",
+        "x": 1200,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "926f829ac7aca6ef",
+        "type": "function",
+        "z": "9a2390d069180de5",
+        "g": "f075a0647b536203",
+        "name": "Generate SQL Query",
+        "func": "\nswitch(msg.topic){\n    case 'imu':\n        msg.topic = \"INSERT INTO \" + msg.topic + \" (ax, ay, az, rx, ry, rz, timestamp) VALUES (\" + Number(msg.payload[\"acceleration\"][0]) + \", \" + Number(msg.payload[\"acceleration\"][1]) + \", \" + Number(msg.payload[\"acceleration\"][2]) + \", \" + Number(msg.payload[\"gyroscope\"][0]) + \", \"+ Number(msg.payload[\"gyroscope\"][1]) + \", \"+ Number(msg.payload[\"gyroscope\"][2]) + \", \"+ Number((Date.now()/1000).toFixed(0)) + \")\";\n        break;\n    case 'tracker2':\n        msg.topic = \"INSERT INTO \" + msg.topic + \" (status, timestamp) VALUES (\" + Number(msg.payload[\"status\"]) + \", \" + Number((Date.now()/1000).toFixed(0)) + \")\";\n        break;\n    case 'light':\n        msg.topic = \"INSERT INTO \" + msg.topic + \" (intensity, timestamp) VALUES (\" + Number(msg.payload[\"intensity\"]) + \", \" + Number((Date.now()/1000).toFixed(0)) + \")\";\n        break;\n    case 'plateTracker':\n        msg.topic = \"INSERT INTO \" + msg.topic + \" (plateTime, count, status, timestamp) VALUES (\" + Number(msg.payload[\"plateTime\"]) + \", \" + Number(msg.payload[\"count\"]) + \", \" + Number(msg.payload[\"status\"]) + \", \" + Number((Date.now()/1000).toFixed(0)) + \")\";\n        break;\n    \n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 372,
+        "wires": [
+            [
+                "79da870994dd46f6"
+            ]
+        ]
+    },
+    {
+        "id": "fc53940c85f967ad",
+        "type": "json",
+        "z": "9a2390d069180de5",
+        "g": "f075a0647b536203",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": true,
+        "x": 370,
+        "y": 372,
+        "wires": [
+            [
+                "e5da2fe7.08c1c"
+            ]
+        ]
+    },
+    {
+        "id": "dd2468b6.6d4f28",
+        "type": "mqtt in",
+        "z": "9a2390d069180de5",
+        "g": "52fb27b92c27cdac",
+        "name": "",
+        "topic": "ESPBox1/#",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "a03d1a27.84c4c8",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 230,
+        "y": 580,
+        "wires": [
+            [
+                "d072e0e7.5c41",
+                "7ec0804b.0128"
+            ]
+        ]
+    },
+    {
+        "id": "7ec0804b.0128",
+        "type": "debug",
+        "z": "9a2390d069180de5",
+        "name": "Check message",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "d072e0e7.5c41",
+        "type": "json",
+        "z": "9a2390d069180de5",
+        "g": "52fb27b92c27cdac",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 370,
+        "y": 580,
+        "wires": [
+            [
+                "8934af2f.fc635"
+            ]
+        ]
+    },
+    {
+        "id": "b30e5479.7bdb68",
+        "type": "function",
+        "z": "9a2390d069180de5",
+        "g": "52fb27b92c27cdac",
+        "name": "Add timestamps",
+        "func": "const measurement_time = 6000\nconst total_time = 30000\n\nfor (let i = 0; i < msg.payload.length; i++){\n    msg.payload[i][\"timestamp\"] = ((Date.now() - (total_time-i*measurement_time))/1000).toFixed(0);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 580,
+        "wires": [
+            [
+                "2b7da3c3.b0df7c"
+            ]
+        ]
+    },
+    {
+        "id": "2b7da3c3.b0df7c",
+        "type": "function",
+        "z": "9a2390d069180de5",
+        "g": "52fb27b92c27cdac",
+        "name": "Insert DHT11 data",
+        "func": "let meas_arr = []\n\nswitch(msg.topic){\n    case \"DHT11\":\n        for(let i = 0; i < msg.payload.length; i++){\n            meas_arr[i] = ([msg.payload[i][\"temp\"], msg.payload[i][\"hum\"], msg.payload[i][\"timestamp\"]])\n        }\n            \n}\nmsg.meas = JSON.stringify(meas_arr)\n//msg.meas = msg.meas.replace(\"/[|[[/g\", \"(\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 580,
+        "wires": [
+            [
+                "5b71024c335d4885",
+                "7ec0804b.0128"
+            ]
+        ]
+    },
+    {
+        "id": "8934af2f.fc635",
+        "type": "change",
+        "z": "9a2390d069180de5",
+        "g": "52fb27b92c27cdac",
+        "name": "remove esp namespace",
+        "rules": [
+            {
+                "t": "change",
+                "p": "topic",
+                "pt": "msg",
+                "from": "ESPBox1/",
+                "fromt": "str",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 580,
+        "wires": [
+            [
+                "b30e5479.7bdb68"
+            ]
+        ]
+    },
+    {
+        "id": "5b71024c335d4885",
+        "type": "change",
+        "z": "9a2390d069180de5",
+        "g": "52fb27b92c27cdac",
+        "name": "format string",
+        "rules": [
+            {
+                "t": "change",
+                "p": "meas",
+                "pt": "msg",
+                "from": "[",
+                "fromt": "str",
+                "to": "(",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "meas",
+                "pt": "msg",
+                "from": "]",
+                "fromt": "str",
+                "to": ")",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 540,
+        "wires": [
+            [
+                "2f49927649c21897"
+            ]
+        ]
+    },
+    {
+        "id": "bf90353b95d8000f",
+        "type": "function",
+        "z": "9a2390d069180de5",
+        "g": "52fb27b92c27cdac",
+        "name": "",
+        "func": " msg.topic = \"INSERT INTO \" + msg.topic + \" (temperature, humidity, timestamp) VALUES \" + msg.meas +\";\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 460,
+        "wires": [
+            [
+                "7ec0804b.0128",
+                "79da870994dd46f6"
+            ]
+        ]
+    },
+    {
+        "id": "2f49927649c21897",
+        "type": "change",
+        "z": "9a2390d069180de5",
+        "g": "52fb27b92c27cdac",
+        "name": "format string",
+        "rules": [
+            {
+                "t": "change",
+                "p": "meas",
+                "pt": "msg",
+                "from": "((",
+                "fromt": "str",
+                "to": "(",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "meas",
+                "pt": "msg",
+                "from": "))",
+                "fromt": "str",
+                "to": ")",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 500,
+        "wires": [
+            [
+                "bf90353b95d8000f"
+            ]
+        ]
+    },
+    {
+        "id": "4e5faf635b8781ce",
+        "type": "debug",
+        "z": "9a2390d069180de5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a1b8bf4.8e82e4",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "5339cbe2c181bca0",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "10.3.141.1",
+        "port": "3306",
+        "db": "iiot_case",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "a03d1a27.84c4c8",
+        "type": "mqtt-broker",
+        "name": "iiot_case_2",
+        "broker": "10.3.141.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]
