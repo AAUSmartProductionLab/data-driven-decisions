@@ -1,0 +1,763 @@
+[
+    {
+        "id": "4732f75b1108682e",
+        "type": "tab",
+        "label": "Data Download",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "508b97b38cd4550c",
+        "type": "change",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "select * from DHT11 order by id asc;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "649e7e7c6458cf23"
+            ]
+        ]
+    },
+    {
+        "id": "649e7e7c6458cf23",
+        "type": "mysql",
+        "z": "4732f75b1108682e",
+        "mydb": "5339cbe2c181bca0",
+        "name": "",
+        "x": 640,
+        "y": 120,
+        "wires": [
+            [
+                "4768852a08393138"
+            ]
+        ]
+    },
+    {
+        "id": "4768852a08393138",
+        "type": "csv",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "once",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 830,
+        "y": 120,
+        "wires": [
+            [
+                "8091480dba4c5a41"
+            ]
+        ]
+    },
+    {
+        "id": "8091480dba4c5a41",
+        "type": "file",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "filename": "Public/DHT_Log.csv",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1040,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c7e341a0.381cc",
+        "type": "http in",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "url": "/DHT_Log",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "2fb1c354.d04e3c"
+            ]
+        ]
+    },
+    {
+        "id": "2fb1c354.d04e3c",
+        "type": "file in",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "filename": "Public/DHT_Log.csv",
+        "format": "",
+        "allProps": false,
+        "x": 440,
+        "y": 180,
+        "wires": [
+            [
+                "c9e28681.361d78"
+            ]
+        ]
+    },
+    {
+        "id": "c9e28681.361d78",
+        "type": "change",
+        "z": "4732f75b1108682e",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/csv",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 180,
+        "wires": [
+            [
+                "88974243.7768c"
+            ]
+        ]
+    },
+    {
+        "id": "88974243.7768c",
+        "type": "http response",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "869480509150900f",
+        "type": "ui_template",
+        "z": "4732f75b1108682e",
+        "group": "69f4d6da1a166484",
+        "name": "ui_temlplate - present download links on dashboard",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "\n<div >\n    <button ng-click=\"send({payload:'Generating DHT_Log.csv...'})\">Generate DHT_Log.csv</button>\n    <button onclick=\"window.location.href='/DHT_Log'\">Download DHT_Log.csv</button>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 290,
+        "y": 60,
+        "wires": [
+            [
+                "508b97b38cd4550c"
+            ]
+        ]
+    },
+    {
+        "id": "b7c705c44dc0084a",
+        "type": "change",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "select * from tracker order by id asc;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 320,
+        "wires": [
+            [
+                "4c9b564fca019d7c"
+            ]
+        ]
+    },
+    {
+        "id": "4c9b564fca019d7c",
+        "type": "mysql",
+        "z": "4732f75b1108682e",
+        "mydb": "5339cbe2c181bca0",
+        "name": "",
+        "x": 640,
+        "y": 320,
+        "wires": [
+            [
+                "1f8fdcc268dc6493"
+            ]
+        ]
+    },
+    {
+        "id": "1f8fdcc268dc6493",
+        "type": "csv",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "once",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 830,
+        "y": 320,
+        "wires": [
+            [
+                "f83cb5d0b8456cb0"
+            ]
+        ]
+    },
+    {
+        "id": "f83cb5d0b8456cb0",
+        "type": "file",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "filename": "Public/Tracker1_Log.csv",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1050,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "87a0d60e0644d96f",
+        "type": "http in",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "url": "/Tracker1_Log",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "a9a9093a19a69d87"
+            ]
+        ]
+    },
+    {
+        "id": "a9a9093a19a69d87",
+        "type": "file in",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "filename": "Public/Tracker1_Log.csv",
+        "format": "",
+        "allProps": false,
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "e486c0af7ec217f3"
+            ]
+        ]
+    },
+    {
+        "id": "e486c0af7ec217f3",
+        "type": "change",
+        "z": "4732f75b1108682e",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/csv",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 380,
+        "wires": [
+            [
+                "7df7538a5c93488f"
+            ]
+        ]
+    },
+    {
+        "id": "7df7538a5c93488f",
+        "type": "http response",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "27a5bdeeac0ec1a4",
+        "type": "ui_template",
+        "z": "4732f75b1108682e",
+        "group": "69f4d6da1a166484",
+        "name": "ui_temlplate - present download links on dashboard",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "\n<div >\n    <button ng-click=\"send({payload:'Generating Tracker1.csv...'})\">Generate Tracker1_Log.csv</button>\n    <button onclick=\"window.location.href='/Tracker1_Log'\">Download Tracker1_Log.csv</button>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "b7c705c44dc0084a"
+            ]
+        ]
+    },
+    {
+        "id": "cd2289c3ebc6c4e9",
+        "type": "change",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "select * from tracker2 order by id asc;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 520,
+        "wires": [
+            [
+                "d10020c18aa9339c"
+            ]
+        ]
+    },
+    {
+        "id": "d10020c18aa9339c",
+        "type": "mysql",
+        "z": "4732f75b1108682e",
+        "mydb": "5339cbe2c181bca0",
+        "name": "",
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "102cbc20c51c1901"
+            ]
+        ]
+    },
+    {
+        "id": "102cbc20c51c1901",
+        "type": "csv",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "once",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 830,
+        "y": 520,
+        "wires": [
+            [
+                "3e3b40f39c964baa"
+            ]
+        ]
+    },
+    {
+        "id": "3e3b40f39c964baa",
+        "type": "file",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "filename": "Public/Tracker2_Log.csv",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1050,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a80bbf50f480588d",
+        "type": "http in",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "url": "/Tracker2_Log",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 580,
+        "wires": [
+            [
+                "ac9bda6df0bcb5ed"
+            ]
+        ]
+    },
+    {
+        "id": "ac9bda6df0bcb5ed",
+        "type": "file in",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "filename": "Public/Tracker2_Log.csv",
+        "format": "",
+        "allProps": false,
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "a6bb8fad55a15e13"
+            ]
+        ]
+    },
+    {
+        "id": "a6bb8fad55a15e13",
+        "type": "change",
+        "z": "4732f75b1108682e",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/csv",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 580,
+        "wires": [
+            [
+                "634e8ca4773b21e4"
+            ]
+        ]
+    },
+    {
+        "id": "634e8ca4773b21e4",
+        "type": "http response",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "72a2cd19bb521c20",
+        "type": "ui_template",
+        "z": "4732f75b1108682e",
+        "group": "69f4d6da1a166484",
+        "name": "ui_temlplate - present download links on dashboard",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "\n<div >\n    <button ng-click=\"send({payload:'Generating Tracker2_Log.csv...'})\">Generate Tracker2_Log.csv</button>\n    <button onclick=\"window.location.href='/Tracker2_Log'\">Download Tracker2_Log.csv</button>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 290,
+        "y": 460,
+        "wires": [
+            [
+                "cd2289c3ebc6c4e9"
+            ]
+        ]
+    },
+    {
+        "id": "4299e14eeaad8409",
+        "type": "change",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "select * from rfid order by id asc;",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 700,
+        "wires": [
+            [
+                "f44a87721fc211b3"
+            ]
+        ]
+    },
+    {
+        "id": "f44a87721fc211b3",
+        "type": "mysql",
+        "z": "4732f75b1108682e",
+        "mydb": "5339cbe2c181bca0",
+        "name": "",
+        "x": 640,
+        "y": 700,
+        "wires": [
+            [
+                "d117cd6a30d91c3b"
+            ]
+        ]
+    },
+    {
+        "id": "d117cd6a30d91c3b",
+        "type": "csv",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "once",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 830,
+        "y": 700,
+        "wires": [
+            [
+                "9646eeca646beb32"
+            ]
+        ]
+    },
+    {
+        "id": "9646eeca646beb32",
+        "type": "file",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "filename": "Public/RFID_Log.csv",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1040,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5db82104c1995ed0",
+        "type": "http in",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "url": "/RFID_Log",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 760,
+        "wires": [
+            [
+                "149ccf63b706e95b"
+            ]
+        ]
+    },
+    {
+        "id": "149ccf63b706e95b",
+        "type": "file in",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "filename": "Public/RFID_Log.csv",
+        "format": "",
+        "allProps": false,
+        "x": 440,
+        "y": 760,
+        "wires": [
+            [
+                "3212e0e6c64f2e08"
+            ]
+        ]
+    },
+    {
+        "id": "3212e0e6c64f2e08",
+        "type": "change",
+        "z": "4732f75b1108682e",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/csv",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 760,
+        "wires": [
+            [
+                "6506d279e3ac8624"
+            ]
+        ]
+    },
+    {
+        "id": "6506d279e3ac8624",
+        "type": "http response",
+        "z": "4732f75b1108682e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "9b71e7219480f024",
+        "type": "ui_template",
+        "z": "4732f75b1108682e",
+        "group": "69f4d6da1a166484",
+        "name": "ui_temlplate - present download links on dashboard",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "\n<div >\n    <button ng-click=\"send({payload:'Generating RFID_Log.csv...'})\">Generate RFID_Log.csv</button>\n    <button onclick=\"window.location.href='/RFID_Log'\">Download RFID_Log.csv</button>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 290,
+        "y": 640,
+        "wires": [
+            [
+                "4299e14eeaad8409"
+            ]
+        ]
+    },
+    {
+        "id": "5339cbe2c181bca0",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "10.3.141.1",
+        "port": "3306",
+        "db": "iiot_case",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "69f4d6da1a166484",
+        "type": "ui_group",
+        "name": "Datalogs",
+        "tab": "09f788e2f6592535",
+        "order": 1,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "09f788e2f6592535",
+        "type": "ui_tab",
+        "name": "Datalogging",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
