@@ -22,6 +22,7 @@ The code for the Optosensor makes use of a state machine to monitor the status o
  sensor is configured in reflective-mode. The following table should serve to clarify:
  
 | **Condition** | **Previous Condition** | **Diffuse-Mode** | **Reflective-Mode** |
+|---|---|---|---|
 | No Object | No Object | 0 | 2 |
 | Object | No Object | 1 | 3 |
 | Object | Object | 2 | 0 |
