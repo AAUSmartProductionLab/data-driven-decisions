@@ -34,6 +34,8 @@ The sensor condition is sampled on a 200ms basis as default, but this time can b
 ### DHT11
 The DHT11 sensor is used to sample ambient temperature and humidity in an area. This sensor provides a humidity sensing range of 
 20-80% with an accuracy of ±5%, and a temperature sensing range of 0-50°C with an accuracy of ±2°C. The sample rate is max 1Hz. 
+
+##### Code Function
 The current (11/07/2022) code implementation samples the temperature and humidity every 5 minutes, stores this data on the ESP-box
 until 6 samples have been collected. These samples are then sent on the the Raspberry Pi for insertion into the database.
 
