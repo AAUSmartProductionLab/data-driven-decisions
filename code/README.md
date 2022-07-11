@@ -1,4 +1,4 @@
-#Code
+# Code
 In this directory, the various code pieces that are used by the Raspberry Pi and the ESP-boxes can be found.
 The contents of each folder are:
 
