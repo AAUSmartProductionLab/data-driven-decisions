@@ -19,7 +19,7 @@ Node-RED has many basic nodes for message manipulation, these nodes can sort, jo
 
 The IIoT Boxes currently has two flows implemented in Node-RED. Firstly, there is a data collection flow that sends the data from the sensors on the ESP Boxes into a localized database in the IIoT Box. Secondly, there is a visualization flow that is used to show an example of a dashboard that can be made from the data stored in the database.
 
-![Figure](../figures/nodeRedDataIn_27_09.png)
+![Figure](../figures/nodeRedDataIn_27_09.PNG)
 *Figure 2: The Node-RED Data Insert Flow as of 27/09/2022
 
 As shown in Figure 2., there are currently (27/09/2022) two data insert pathways; one for each ESP-box. The ESPBox1 flow concerns the DHT11 data, the ESPBox2 flow concerns the IMU and Line Tracker. The DHT11 sensor document must be parsed and correct timestamps applied, as the ESPs do not have the correct time. The resulting records are then entered into the database. A buffer is implemented for the IMU sensor data, due to the high sample rate of this sensor (50ms). The other ESPBox2 data values are entered into the relevant tables in the database based on their topic (tracker, tracker2, etc.). 
