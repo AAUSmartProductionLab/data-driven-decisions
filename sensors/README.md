@@ -5,7 +5,6 @@ implemented are:
 - Diffuse/Reflective Optosensor
 - DHT11
 - IMU
-- RFID-Reader
 
 ### Optosensor
 The selected optosensor can be ustilised in either diffuse- or reflective-mode (diffuse-mode is default). In the former implemen-
