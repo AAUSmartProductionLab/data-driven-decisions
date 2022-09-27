@@ -29,16 +29,19 @@ The code for the Optosensor makes use of a state machine to monitor the status o
 | No Object | Object | 3 | 1 |
 
 The sensor condition is sampled on a 200ms basis as default, but this time can be successfully reduced to 50ms for fast moving sys-
--tems. Currently (11/07/2022), each sample is recorded in the database. 
+-tems. Currently (27/09/2022), only 1 and 0 values are sent on to Node-RED. 
 
 ### DHT11
 The DHT11 sensor is used to sample ambient temperature and humidity in an area. This sensor provides a humidity sensing range of 
 20-80% with an accuracy of ±5%, and a temperature sensing range of 0-50°C with an accuracy of ±2°C. The sample rate is max 1Hz. 
 
-##### Code Function
-The current (11/07/2022) code implementation samples the temperature and humidity every 5 minutes, stores this data on the ESP-box
-until 6 samples have been collected. These samples are then sent on the the Raspberry Pi for insertion into the database.
+##### Code Implementation
+The current (11/07/2022) code implementation samples the temperature and humidity every 5 minutes, stores this data as a JSON-document 
+on the ESP-box until 6 samples have been collected. This JSON-document is then published to the MQTT topic ESPBox1/DHT11. 
 
 ### IMU
+The IMU sensor is used to gather acceleration and rotation data. An MPU6050 is currently (27/09/2022) used for this sensor. 
 
-### RFID-Reader
+##### Code Implementation
+The current (27/09/2022) code implementation samples the IMU data every 50ms and publishes this data immediately to the MQTT topic 
+ESPBox2/imu. 
