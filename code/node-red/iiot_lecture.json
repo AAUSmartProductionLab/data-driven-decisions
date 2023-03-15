@@ -1,6 +1,6 @@
 [
     {
-        "id": "ee88810d3b61b021",
+        "id": "70da82dacddcb7e9",
         "type": "tab",
         "label": "IIoT Lecture Input",
         "disabled": false,
@@ -8,555 +8,9 @@
         "env": []
     },
     {
-        "id": "9cca74f7daa9ecda",
-        "type": "tab",
-        "label": "IIoT Lecture Dashboard",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "9ae3b787b3ce34ed",
-        "type": "tab",
-        "label": "Dashboard",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "e9f44dd3f0da4ed8",
-        "type": "group",
-        "z": "9ae3b787b3ce34ed",
-        "name": "IMU MPU6050",
-        "style": {
-            "fill": "#ffC000",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "16e8369141f4b7e9",
-            "2ae49ebf9c7d34f1",
-            "12496d3a48112141",
-            "c0eaac94d26b9726",
-            "0c6e37149820dd87",
-            "36f25da69c5e0f2d",
-            "540ec11044caa9fe",
-            "11ab5d81e969e1ec",
-            "a9b9d3422aa1db36",
-            "4ee9c97cf9e39103",
-            "b6de5d55838a64c4",
-            "9567342f4afcb062",
-            "a72af00f97037d49",
-            "88a116082b2069db",
-            "8b8ce5251dff3617",
-            "86854dec6a32348c",
-            "e5bc131ed831dc77",
-            "83d31e6da7493388"
-        ],
-        "x": 274,
-        "y": 79,
-        "w": 1212,
-        "h": 362
-    },
-    {
-        "id": "d26f64a14cd1dda5",
-        "type": "group",
-        "z": "9ae3b787b3ce34ed",
-        "name": "Linetracker SEN-KY033LT",
-        "style": {
-            "label": true,
-            "fill": "#3f93cf",
-            "color": "#000000"
-        },
-        "nodes": [
-            "8936c3b5a9ebeb7a",
-            "e4cbf7962b67bb96",
-            "939653c2589a08fe",
-            "f646b096ca967764",
-            "8da0904d35c4bccd",
-            "492ccb3ada9d0335",
-            "a52a7ff279d481cd",
-            "9093ca8f3bc997c8",
-            "075af3e39c095f63",
-            "a88b8cea6035b8a8",
-            "62f04db22289b2fe",
-            "6db8533711b363e1",
-            "c714e7c84b869e73",
-            "ee3deac09322e15a",
-            "a90074a67f29e7cf",
-            "d31826a7c84eb708",
-            "39d0ae47d3f3a573",
-            "bf733c9263f98efe",
-            "8ec2ea9e49924843",
-            "f147d4f09dae4e0b",
-            "6b57a7f919681f26",
-            "6d74e903f2567d55",
-            "cc577154cbd62f20"
-        ],
-        "x": 274,
-        "y": 459,
-        "w": 1492,
-        "h": 322
-    },
-    {
-        "id": "1522e062397f1cf8",
-        "type": "group",
-        "z": "9ae3b787b3ce34ed",
-        "name": "",
-        "style": {
-            "stroke": "#000000",
-            "fill": "#addb7b",
-            "label": true
-        },
-        "nodes": [
-            "58d483791ef466fa",
-            "090fdfd29aabc4c0",
-            "e29dda9f0ac61454",
-            "207db2421f47fcdd",
-            "e14ecdd9709807db",
-            "a90e80dcf73e41ca"
-        ],
-        "x": 274,
-        "y": 799,
-        "w": 532,
-        "h": 202
-    },
-    {
-        "id": "f70f673fa8663fd1",
-        "type": "group",
-        "z": "9cca74f7daa9ecda",
-        "name": "Dashboard Example",
-        "style": {
-            "fill": "#3f93cf",
-            "label": true,
-            "stroke": "#000000",
-            "color": "#000000"
-        },
-        "nodes": [
-            "0dc8c8369ed6b2a6",
-            "93508545af719a94",
-            "a226c8df54102e02"
-        ],
-        "x": 174,
-        "y": 299,
-        "w": 552,
-        "h": 82
-    },
-    {
-        "id": "83ffc87ad65781f8",
-        "type": "group",
-        "z": "9cca74f7daa9ecda",
-        "name": "SQL Query Example",
-        "style": {
-            "stroke": "#000000",
-            "fill": "#addb7b",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "a3c950b0d622290b",
-            "17b8e86158f8a2ab",
-            "dd016511f851538f",
-            "30561d6d8f744e3d",
-            "155620183b05170e"
-        ],
-        "x": 34,
-        "y": 59,
-        "w": 892,
-        "h": 202
-    },
-    {
-        "id": "42815bc7b17207f9",
-        "type": "mqtt-broker",
-        "name": "iiotcase2-broker",
-        "broker": "10.3.141.1",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "sessionExpiry": ""
-    },
-    {
-        "id": "5339cbe2c181bca0",
-        "type": "MySQLdatabase",
-        "name": "",
-        "host": "10.3.141.1",
-        "port": "3306",
-        "db": "iiot_lecture",
-        "tz": "",
-        "charset": "UTF8"
-    },
-    {
-        "id": "a1b8bf4.8e82e4",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": false,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
-        "id": "227cb73b61ebbd0a",
-        "type": "ui_tab",
-        "name": "Dashboard",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "ba9947ba5b3d221d",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-dark",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "reset": false
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#097479",
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#0eb8c0",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#555555",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#eeeeee",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "9a080e9b9be6c6a1",
-        "type": "ui_tab",
-        "name": "Vibration Sensor",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "458d41af858c0a6a",
-        "type": "ui_group",
-        "name": "Acceleration",
-        "tab": "b6c8050f63eb2a0a",
-        "order": 2,
-        "disp": true,
-        "width": "23",
-        "collapse": true,
-        "className": ""
-    },
-    {
-        "id": "d50d0c9f.31e858",
-        "type": "tls-config",
-        "name": "",
-        "cert": "",
-        "key": "",
-        "ca": "",
-        "certname": "",
-        "keyname": "",
-        "caname": "",
-        "servername": "",
-        "verifyservercert": false
-    },
-    {
-        "id": "5ecb4dc3.6713a4",
-        "type": "influxdb",
-        "d": true,
-        "hostname": "172.20.66.5",
-        "port": "8086",
-        "protocol": "http",
-        "database": "FestoSensors",
-        "name": "smartProdLab",
-        "usetls": false,
-        "tls": "d50d0c9f.31e858",
-        "influxdbVersion": "1.x",
-        "url": "http://localhost:8086",
-        "rejectUnauthorized": true
-    },
-    {
-        "id": "e0c6467bde0b2b53",
-        "type": "ui_group",
-        "name": "Rotation",
-        "tab": "9a080e9b9be6c6a1",
-        "order": 3,
-        "disp": true,
-        "width": "23",
-        "collapse": true,
-        "className": ""
-    },
-    {
-        "id": "b6c8050f63eb2a0a",
-        "type": "ui_tab",
-        "name": "Line Tracker",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "0201b189f18d3e63",
-        "type": "ui_group",
-        "d": true,
-        "name": "Line Tracker",
-        "tab": "227cb73b61ebbd0a",
-        "order": 1,
-        "disp": true,
-        "width": "23",
-        "collapse": true,
-        "className": ""
-    },
-    {
-        "id": "a03d1a27.84c4c8",
-        "type": "mqtt-broker",
-        "name": "iiot_case_2",
-        "broker": "10.3.141.1",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": false,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
-        "id": "69f4d6da1a166484",
-        "type": "ui_group",
-        "name": "Datalogs",
-        "tab": "09f788e2f6592535",
-        "order": 1,
-        "disp": true,
-        "width": "20",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "09f788e2f6592535",
-        "type": "ui_tab",
-        "name": "Datalogging",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "f6bae4dbde7d9690",
-        "type": "ui_group",
-        "d": true,
-        "name": "Period Select",
-        "tab": "227cb73b61ebbd0a",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": true,
-        "className": ""
-    },
-    {
-        "id": "7f59370ccb8ef3ad",
-        "type": "ui_spacer",
-        "z": "9ae3b787b3ce34ed",
-        "name": "spacer",
-        "group": "f6bae4dbde7d9690",
-        "order": 3,
-        "width": "6",
-        "height": "1"
-    },
-    {
-        "id": "6074e91623f71e9c",
-        "type": "ui_spacer",
-        "z": "9ae3b787b3ce34ed",
-        "name": "spacer",
-        "group": "f6bae4dbde7d9690",
-        "order": 6,
-        "width": "0",
-        "height": "0"
-    },
-    {
-        "id": "e7a548586bcd5026",
-        "type": "ui_group",
-        "name": "Cycle Time",
-        "tab": "227cb73b61ebbd0a",
-        "order": 6,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "f277cf990d3953ea",
-        "type": "ui_group",
-        "name": "Wait Time",
-        "tab": "227cb73b61ebbd0a",
-        "order": 7,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "8255157c2594243e",
-        "type": "ui_group",
-        "name": "X-Axis Vibration",
-        "tab": "227cb73b61ebbd0a",
-        "order": 3,
-        "disp": true,
-        "width": "12",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "3e8dbce0fd6eeba5",
-        "type": "ui_group",
-        "name": "Y-Axis Vibration",
-        "tab": "227cb73b61ebbd0a",
-        "order": 4,
-        "disp": true,
-        "width": "12",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "871e59ad0a9dd058",
-        "type": "ui_group",
-        "name": "Z-Axis Vibration",
-        "tab": "227cb73b61ebbd0a",
-        "order": 5,
-        "disp": true,
-        "width": "12",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "ee2619d21e981d59",
-        "type": "ui_tab",
-        "name": "IIoT Lecture",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "46ea661772b12a89",
-        "type": "ui_group",
-        "name": "iiot_lecture",
-        "tab": "ee2619d21e981d59",
-        "order": 1,
-        "disp": true,
-        "width": "14",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "09f5d365f60256ce",
+        "id": "2dab59fe78d433fd",
         "type": "mqtt in",
-        "z": "ee88810d3b61b021",
+        "z": "70da82dacddcb7e9",
         "name": "",
         "topic": "ESPBox2/tracker2",
         "qos": "2",
@@ -569,15 +23,15 @@
         "y": 420,
         "wires": [
             [
-                "d9cc5c6991f5bee6",
-                "df3a8a2ec31985a0"
+                "e30b40377c0e43fe",
+                "949b1da036eb2a58"
             ]
         ]
     },
     {
-        "id": "f053e8eb32d2a178",
+        "id": "c4d974b25dc1465a",
         "type": "mqtt in",
-        "z": "ee88810d3b61b021",
+        "z": "70da82dacddcb7e9",
         "name": "",
         "topic": "ESPBox1/tracker2",
         "qos": "0",
@@ -590,15 +44,15 @@
         "y": 500,
         "wires": [
             [
-                "d9cc5c6991f5bee6",
-                "df3a8a2ec31985a0"
+                "e30b40377c0e43fe",
+                "949b1da036eb2a58"
             ]
         ]
     },
     {
-        "id": "d9cc5c6991f5bee6",
+        "id": "e30b40377c0e43fe",
         "type": "debug",
-        "z": "ee88810d3b61b021",
+        "z": "70da82dacddcb7e9",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -612,9 +66,9 @@
         "wires": []
     },
     {
-        "id": "df3a8a2ec31985a0",
+        "id": "949b1da036eb2a58",
         "type": "json",
-        "z": "ee88810d3b61b021",
+        "z": "70da82dacddcb7e9",
         "name": "",
         "property": "payload",
         "action": "obj",
@@ -623,14 +77,14 @@
         "y": 460,
         "wires": [
             [
-                "48d7692c9c16f0e2"
+                "6119cc88c803610c"
             ]
         ]
     },
     {
-        "id": "48d7692c9c16f0e2",
+        "id": "6119cc88c803610c",
         "type": "change",
-        "z": "ee88810d3b61b021",
+        "z": "70da82dacddcb7e9",
         "name": "",
         "rules": [
             {
@@ -661,14 +115,14 @@
         "y": 460,
         "wires": [
             [
-                "224825e59ce4c716"
+                "398f41d2ac07f205"
             ]
         ]
     },
     {
-        "id": "224825e59ce4c716",
+        "id": "398f41d2ac07f205",
         "type": "function",
-        "z": "ee88810d3b61b021",
+        "z": "70da82dacddcb7e9",
         "name": "Generate SQL Query",
         "func": "\nswitch(msg.topic){\n    /*\n    case 'imu':\n        msg.topic = \"INSERT INTO \" + msg.topic + \" (ax, ay, az, rx, ry, rz, timestamp) VALUES (\" + Number(msg.payload[\"acceleration\"][0]) + \", \" + Number(msg.payload[\"acceleration\"][1]) + \", \" + Number(msg.payload[\"acceleration\"][2]) + \", \" + Number(msg.payload[\"gyroscope\"][0]) + \", \"+ Number(msg.payload[\"gyroscope\"][1]) + \", \"+ Number(msg.payload[\"gyroscope\"][2]) + \", \"+ Number((Date.now()/1000).toFixed(0)) + \")\";\n        break;\n    */\n    case 'tracker_robot':\n        msg.topic = \"INSERT INTO \" + msg.topic + \" (status, timestamp) VALUES (\" + Number(msg.payload.timeBlocked) + \", \" + Number(Date.now()) + \")\";\n        break;\n    case 'tracker_top_cover':\n        msg.topic = \"INSERT INTO \" + msg.topic + \" (status, timestamp) VALUES (\" + Number(msg.payload.timeBlocked) + \", \" + Number(Date.now()) + \")\";\n        break;\n    \n}\n\n\nreturn msg;",
         "outputs": 1,
@@ -680,15 +134,15 @@
         "y": 460,
         "wires": [
             [
-                "a9852075a29209de"
+                "a5d3ff8b527d6a27"
             ]
         ]
     },
     {
-        "id": "a9852075a29209de",
+        "id": "a5d3ff8b527d6a27",
         "type": "mysql",
-        "z": "ee88810d3b61b021",
-        "mydb": "5339cbe2c181bca0",
+        "z": "70da82dacddcb7e9",
+        "mydb": "4f1710704aaf6586",
         "name": "",
         "x": 890,
         "y": 460,
@@ -697,25 +151,100 @@
         ]
     },
     {
-        "id": "a3c950b0d622290b",
+        "id": "38a2cc4448c88130",
+        "type": "tab",
+        "label": "IIoT Lecture Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2ddff92be0ca52cf",
+        "type": "group",
+        "z": "38a2cc4448c88130",
+        "name": "Dashboard Example",
+        "style": {
+            "fill": "#3f93cf",
+            "label": true,
+            "stroke": "#000000",
+            "color": "#000000"
+        },
+        "nodes": [
+            "13d22c8b84d34c78",
+            "211867dc9024f00d",
+            "0e9d098b15125acb"
+        ],
+        "x": 174,
+        "y": 299,
+        "w": 552,
+        "h": 82
+    },
+    {
+        "id": "15f7c076dc6eb8a2",
+        "type": "group",
+        "z": "38a2cc4448c88130",
+        "name": "SQL Query Example",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#addb7b",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "2a3efc8452bb06dc",
+            "36ca3c7f966672b5",
+            "3114d7031560da57",
+            "efb3b3a260dd2d87",
+            "a5600667b56a425c"
+        ],
+        "x": 34,
+        "y": 59,
+        "w": 892,
+        "h": 202
+    },
+    {
+        "id": "ebb7a525ca205a26",
+        "type": "group",
+        "z": "38a2cc4448c88130",
+        "name": "SQL Query Example",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#addb7b",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "5888120f3ed6205a",
+            "dbd9a98c8a58d0f5",
+            "1d8a1338464cd5bb",
+            "65497ab22283d6dc",
+            "4eedff0662e01bbc"
+        ],
+        "x": 54,
+        "y": 419,
+        "w": 892,
+        "h": 202
+    },
+    {
+        "id": "2a3efc8452bb06dc",
         "type": "mysql",
-        "z": "9cca74f7daa9ecda",
-        "g": "83ffc87ad65781f8",
-        "mydb": "5339cbe2c181bca0",
+        "z": "38a2cc4448c88130",
+        "g": "15f7c076dc6eb8a2",
+        "mydb": "4f1710704aaf6586",
         "name": "",
         "x": 550,
         "y": 120,
         "wires": [
             [
-                "dd016511f851538f"
+                "3114d7031560da57"
             ]
         ]
     },
     {
-        "id": "17b8e86158f8a2ab",
+        "id": "36ca3c7f966672b5",
         "type": "inject",
-        "z": "9cca74f7daa9ecda",
-        "g": "83ffc87ad65781f8",
+        "z": "38a2cc4448c88130",
+        "g": "15f7c076dc6eb8a2",
         "name": "get_data_from_time",
         "props": [
             {
@@ -737,15 +266,15 @@
         "y": 100,
         "wires": [
             [
-                "a3c950b0d622290b"
+                "2a3efc8452bb06dc"
             ]
         ]
     },
     {
-        "id": "dd016511f851538f",
+        "id": "3114d7031560da57",
         "type": "debug",
-        "z": "9cca74f7daa9ecda",
-        "g": "83ffc87ad65781f8",
+        "z": "38a2cc4448c88130",
+        "g": "15f7c076dc6eb8a2",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -759,10 +288,10 @@
         "wires": []
     },
     {
-        "id": "30561d6d8f744e3d",
+        "id": "efb3b3a260dd2d87",
         "type": "inject",
-        "z": "9cca74f7daa9ecda",
-        "g": "83ffc87ad65781f8",
+        "z": "38a2cc4448c88130",
+        "g": "15f7c076dc6eb8a2",
         "name": "get_latest_x_samples",
         "props": [
             {
@@ -784,15 +313,15 @@
         "y": 160,
         "wires": [
             [
-                "a3c950b0d622290b"
+                "2a3efc8452bb06dc"
             ]
         ]
     },
     {
-        "id": "155620183b05170e",
+        "id": "a5600667b56a425c",
         "type": "inject",
-        "z": "9cca74f7daa9ecda",
-        "g": "83ffc87ad65781f8",
+        "z": "38a2cc4448c88130",
+        "g": "15f7c076dc6eb8a2",
         "name": "get_number_of_samples_in_time_frame",
         "props": [
             {
@@ -814,17 +343,17 @@
         "y": 220,
         "wires": [
             [
-                "a3c950b0d622290b"
+                "2a3efc8452bb06dc"
             ]
         ]
     },
     {
-        "id": "0dc8c8369ed6b2a6",
+        "id": "13d22c8b84d34c78",
         "type": "ui_button",
-        "z": "9cca74f7daa9ecda",
-        "g": "f70f673fa8663fd1",
+        "z": "38a2cc4448c88130",
+        "g": "2ddff92be0ca52cf",
         "name": "",
-        "group": "46ea661772b12a89",
+        "group": "d46f2737f65046e7",
         "order": 0,
         "width": 0,
         "height": 0,
@@ -843,17 +372,17 @@
         "y": 340,
         "wires": [
             [
-                "a226c8df54102e02"
+                "0e9d098b15125acb"
             ]
         ]
     },
     {
-        "id": "93508545af719a94",
+        "id": "211867dc9024f00d",
         "type": "ui_gauge",
-        "z": "9cca74f7daa9ecda",
-        "g": "f70f673fa8663fd1",
+        "z": "38a2cc4448c88130",
+        "g": "2ddff92be0ca52cf",
         "name": "",
-        "group": "46ea661772b12a89",
+        "group": "d46f2737f65046e7",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -876,1199 +405,211 @@
         "wires": []
     },
     {
-        "id": "a226c8df54102e02",
+        "id": "0e9d098b15125acb",
         "type": "mysql",
-        "z": "9cca74f7daa9ecda",
-        "g": "f70f673fa8663fd1",
-        "mydb": "5339cbe2c181bca0",
+        "z": "38a2cc4448c88130",
+        "g": "2ddff92be0ca52cf",
+        "mydb": "4f1710704aaf6586",
         "name": "",
         "x": 410,
         "y": 340,
         "wires": [
             [
-                "93508545af719a94"
+                "211867dc9024f00d"
             ]
         ]
     },
     {
-        "id": "16e8369141f4b7e9",
+        "id": "5888120f3ed6205a",
         "type": "mysql",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "mydb": "5339cbe2c181bca0",
-        "name": "Accelerometer",
-        "x": 1020,
-        "y": 120,
-        "wires": [
-            [
-                "12496d3a48112141",
-                "8b8ce5251dff3617"
-            ]
-        ]
-    },
-    {
-        "id": "2ae49ebf9c7d34f1",
-        "type": "ui_chart",
-        "z": "9ae3b787b3ce34ed",
-        "d": true,
-        "g": "e9f44dd3f0da4ed8",
+        "z": "38a2cc4448c88130",
+        "g": "ebb7a525ca205a26",
+        "mydb": "4f1710704aaf6586",
         "name": "",
-        "group": "458d41af858c0a6a",
-        "order": 0,
-        "width": "21",
-        "height": "11",
-        "label": "Acceleration [m/s²]",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "dd HH:mm",
-        "interpolate": "linear",
-        "nodata": "No Data",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "30",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#ff0000",
-            "#00ffff",
-            "#00ff00",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1370,
-        "y": 120,
-        "wires": [
-            [
-                "98c8f6d95490ed29"
-            ]
-        ]
-    },
-    {
-        "id": "12496d3a48112141",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "",
-        "func": "var series = [\"X\",\"Y\", \"Z\"];\nvar msg1 = [];\nvar msg2 = [];\nvar msg3 = [];\nvar labels = [\"X-axis\", \"Y-axis\", \"Z-axis\"];\n\n\nfor(var i = 0, len = msg.payload.length; i < len; i++){\n    var tStamp = new Date(msg.payload[i].timestamp);\n    \n  msg1.push({x: tStamp, y: msg.payload[i].ax});\n  msg2.push({x: tStamp, y: msg.payload[i].ay});\n  msg3.push({x: tStamp, y: msg.payload[i].az});\n}\n\nmsg.payload = [{\"series\": series, \"data\": [msg1, msg2, msg3], \"labels\": labels}];\n\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1180,
-        "y": 120,
-        "wires": [
-            [
-                "2ae49ebf9c7d34f1"
-            ]
-        ]
-    },
-    {
-        "id": "c0eaac94d26b9726",
-        "type": "ui_chart",
-        "z": "9ae3b787b3ce34ed",
-        "d": true,
-        "g": "e9f44dd3f0da4ed8",
-        "name": "",
-        "group": "e0c6467bde0b2b53",
-        "order": 0,
-        "width": "21",
-        "height": "11",
-        "label": "Rotation [°/s]",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "dd HH:mm",
-        "interpolate": "linear",
-        "nodata": "No Data",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "30",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#fb00ff",
-            "#ffff00",
-            "#00ffff",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1350,
-        "y": 300,
-        "wires": [
-            [
-                "98c8f6d95490ed29"
-            ]
-        ]
-    },
-    {
-        "id": "0c6e37149820dd87",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "",
-        "func": "var series = [\"Pitch (rx)\",\"Yaw (ry)\", \"Roll (rz)\"];\nvar msg1 = [];\nvar msg2 = [];\nvar msg3 = [];\nvar labels = [\"Pitch\", \"Yaw\", \"Roll\"];\n\n\nfor(var i = 0, len = msg.payload.length; i < len; i++){\n    var tStamp = new Date(msg.payload[i].timestamp);\n    \n  msg1.push({x: tStamp, y: msg.payload[i].rx});\n  msg2.push({x: tStamp, y: msg.payload[i].ry});\n  msg3.push({x: tStamp, y: msg.payload[i].rz});\n}\n\nmsg.payload = [{\"series\": series, \"data\": [msg1, msg2, msg3], \"labels\": labels}];\n\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1180,
-        "y": 300,
-        "wires": [
-            [
-                "c0eaac94d26b9726"
-            ]
-        ]
-    },
-    {
-        "id": "8936c3b5a9ebeb7a",
-        "type": "ui_chart",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "group": "0201b189f18d3e63",
-        "order": 2,
-        "width": "8",
-        "height": "6",
-        "label": "Unit Count",
-        "chartType": "bar",
-        "legend": "true",
-        "xformat": "dd HH:mm",
-        "interpolate": "linear",
-        "nodata": "No Data",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "1",
-        "removeOlderPoints": "3600",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#ededed",
-            "#ffff00",
-            "#00ff00",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1570,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e4cbf7962b67bb96",
-        "type": "mysql",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "mydb": "5339cbe2c181bca0",
-        "name": "Tracker",
-        "x": 1060,
-        "y": 560,
-        "wires": [
-            [
-                "939653c2589a08fe",
-                "a88b8cea6035b8a8",
-                "8ec2ea9e49924843",
-                "6d74e903f2567d55"
-            ]
-        ]
-    },
-    {
-        "id": "939653c2589a08fe",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "func": "var series = [\"Units Produced this Week\"];\n\nvar labels = [\" Weekly Average\",\"Yesterday\", \"Today\"];\nvar countToday = 0;\nvar countYesterday = 0;\nvar countWeek = 0;\nvar average = 0;\nvar d = new Date();\nconst currentDate = d.getTime();\n\n\nfor(var i = 0, len = msg.payload.length; i < len; i++){\n    var tStamp = new Date(msg.payload[i].timestamp * 1000);\n    if (msg.payload[i][\"status\"] == 0){\n            //if tStamp = today sum count\n        if ((currentDate - tStamp.getTime())/86400000 <= 1){\n            countToday++;\n        }\n        else if ((currentDate - tStamp.getTime())/86400000 <= 2){\n            countYesterday++;\n        }\n        if ((currentDate - tStamp.getTime())/86400000 <= 7){\n            countWeek++;\n        }\n    }\n}\n\naverage = countWeek/5;\n\nmsg.payload = [{\"series\": series, \"data\": [average, countYesterday, countToday], \"labels\": labels}];\n\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1360,
-        "y": 560,
-        "wires": [
-            [
-                "8936c3b5a9ebeb7a",
-                "8da0904d35c4bccd",
-                "a52a7ff279d481cd",
-                "cc577154cbd62f20"
-            ]
-        ]
-    },
-    {
-        "id": "f646b096ca967764",
-        "type": "ui_gauge",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "group": "0201b189f18d3e63",
-        "order": 5,
-        "width": "5",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Today Performance",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#ca3838",
-            "#e6e600",
-            "#00b500"
-        ],
-        "seg1": "90",
-        "seg2": "98",
-        "className": "",
-        "x": 1590,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "8da0904d35c4bccd",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "func": "var performance = (msg.payload[0].data[2]/msg.payload[0].data[0])*100;\n\nmsg.payload = [performance];\n\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1360,
-        "y": 620,
-        "wires": [
-            [
-                "f646b096ca967764"
-            ]
-        ]
-    },
-    {
-        "id": "492ccb3ada9d0335",
-        "type": "ui_gauge",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "group": "0201b189f18d3e63",
-        "order": 6,
-        "width": "5",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Yesterday Performance",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#ca3838",
-            "#e6e600",
-            "#00b500"
-        ],
-        "seg1": "90",
-        "seg2": "98",
-        "className": "",
-        "x": 1610,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "a52a7ff279d481cd",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "func": "var performance = (msg.payload[0].data[1]/msg.payload[0].data[0])*100;\n\nmsg.payload = [performance];\n\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1360,
-        "y": 680,
-        "wires": [
-            [
-                "492ccb3ada9d0335"
-            ]
-        ]
-    },
-    {
-        "id": "9093ca8f3bc997c8",
-        "type": "ui_text_input",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "label": "Planned Units",
-        "tooltip": "",
-        "group": "0201b189f18d3e63",
-        "order": 4,
-        "width": "15",
-        "height": "1",
-        "passthru": true,
-        "mode": "number",
-        "delay": "0",
-        "topic": "",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "str",
-        "x": 580,
-        "y": 720,
-        "wires": [
-            [
-                "62f04db22289b2fe"
-            ]
-        ]
-    },
-    {
-        "id": "075af3e39c095f63",
-        "type": "ui_gauge",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "group": "0201b189f18d3e63",
-        "order": 7,
-        "width": "5",
-        "height": "5",
-        "gtype": "gage",
-        "title": "Weekly Performance (OEE)",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#ca3838",
-            "#e6e600",
-            "#00b500"
-        ],
-        "seg1": "90",
-        "seg2": "98",
-        "className": "",
-        "x": 1620,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "a88b8cea6035b8a8",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "func": "var countWeek = 0;\n\nvar d = new Date();\nconst currentDate = d.getTime();\n\n\nfor(var i = 0, len = msg.payload.length; i < len; i++){\n    var tStamp = new Date(msg.payload[i].timestamp * 1000);\n    if (msg.payload[i][\"status\"] == 0){\n      \n        if ((tStamp.getTime() - currentDate)/86400 <= 7){\n            countWeek++;\n        }\n    }\n}\n\n\nvar performance = (countWeek/flow.get(\"plannedUnits\"))*100;\n\nmsg.payload = [(performance).toFixed(2)];\n\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1360,
-        "y": 740,
-        "wires": [
-            [
-                "075af3e39c095f63"
-            ]
-        ]
-    },
-    {
-        "id": "62f04db22289b2fe",
-        "type": "switch",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "istype",
-                "v": "number",
-                "vt": "number"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 730,
-        "y": 720,
-        "wires": [
-            [
-                "6db8533711b363e1"
-            ]
-        ]
-    },
-    {
-        "id": "6db8533711b363e1",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "func": "flow.set(\"plannedUnits\", msg.payload);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 860,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ee3deac09322e15a",
-        "type": "switch",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "If Not Init Sig",
-        "property": "counter.tracker",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
         "x": 570,
-        "y": 620,
+        "y": 480,
         "wires": [
             [
-                "a90074a67f29e7cf"
+                "1d8a1338464cd5bb"
             ]
         ]
     },
     {
-        "id": "c714e7c84b869e73",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "func": "var counter = flow.get(\"counter.tracker\");\n\nif (counter == 0) {\n    counter++;\n    flow.set(\"counter.tracker\", counter)\n    return msg;\n}else {\n    counter++;\n    flow.set(\"counter.tracker\", counter)\n    return;\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"counter.tracker\", 0);",
-        "finalize": "",
-        "libs": [],
-        "x": 560,
-        "y": 560,
-        "wires": [
-            [
-                "39d0ae47d3f3a573"
-            ]
-        ]
-    },
-    {
-        "id": "a90074a67f29e7cf",
-        "type": "delay",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 580,
-        "y": 660,
-        "wires": [
-            [
-                "39d0ae47d3f3a573"
-            ]
-        ]
-    },
-    {
-        "id": "d31826a7c84eb708",
-        "type": "change",
-        "z": "9ae3b787b3ce34ed",
-        "d": true,
-        "g": "d26f64a14cd1dda5",
-        "name": "Query Tracker",
-        "rules": [
+        "id": "dbd9a98c8a58d0f5",
+        "type": "inject",
+        "z": "38a2cc4448c88130",
+        "g": "ebb7a525ca205a26",
+        "name": "get_data_from_time",
+        "props": [
             {
-                "t": "set",
+                "p": "payload"
+            },
+            {
                 "p": "topic",
-                "pt": "msg",
-                "to": "SELECT status, timestamp FROM tracker WHERE timestamp BETWEEN flow.get(\"startPoint\") AND flow.get(\"endPoint\");",
-                "tot": "str"
+                "vt": "str"
             }
         ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 860,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "11ab5d81e969e1ec",
-        "type": "delay",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "0.5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 650,
-        "y": 400,
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": " SELECT timestamp, status FROM tracker_robot WHERE timestamp >= ((UNIX_TIMESTAMP() - (3*3600))*1000);",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 460,
         "wires": [
             [
-                "a9b9d3422aa1db36"
+                "5888120f3ed6205a"
             ]
         ]
     },
     {
-        "id": "540ec11044caa9fe",
-        "type": "switch",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "If Not Init Sig",
-        "property": "counter.gyroscope",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 610,
-        "y": 360,
-        "wires": [
-            [
-                "11ab5d81e969e1ec"
-            ]
-        ]
-    },
-    {
-        "id": "36f25da69c5e0f2d",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "",
-        "func": "var counter = flow.get(\"counter.gyroscope\");\n\nif (counter == 0) {\n    counter++;\n    flow.set(\"counter.gyroscope\", counter)\n    return msg;\n}else {\n    counter++;\n    flow.set(\"counter.gyroscope\", counter)\n    return;\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"counter.gyroscope\", 0);",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 300,
-        "wires": [
-            [
-                "a9b9d3422aa1db36"
-            ]
-        ]
-    },
-    {
-        "id": "a9b9d3422aa1db36",
-        "type": "change",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "Query Gyroscope",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "SELECT timestamp, rx,ry,rz FROM imu WHERE timestamp >= ((UNIX_TIMESTAMP() - (15*60))*1000000);",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 810,
-        "y": 300,
-        "wires": [
-            [
-                "3ec3519d3d253771"
-            ]
-        ]
-    },
-    {
-        "id": "b6de5d55838a64c4",
-        "type": "delay",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "0.5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 650,
-        "y": 220,
-        "wires": [
-            [
-                "4ee9c97cf9e39103"
-            ]
-        ]
-    },
-    {
-        "id": "9567342f4afcb062",
-        "type": "switch",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "If Not Init Sig",
-        "property": "counter.accelerometer",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 610,
-        "y": 180,
-        "wires": [
-            [
-                "b6de5d55838a64c4"
-            ]
-        ]
-    },
-    {
-        "id": "a72af00f97037d49",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "",
-        "func": "var counter = flow.get(\"counter.accelerometer\");\n\nif (counter == 0) {\n    counter++;\n    flow.set(\"counter.accelerometer\", counter)\n    return msg;\n}else {\n    counter++;\n    flow.set(\"counter.accelerometer\", counter)\n    return;\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"counter.accelerometer\", 0);",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 120,
-        "wires": [
-            [
-                "4ee9c97cf9e39103"
-            ]
-        ]
-    },
-    {
-        "id": "4ee9c97cf9e39103",
-        "type": "change",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "Query Accelerometer",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "SELECT timestamp, ax, ay, az FROM imu WHERE timestamp >= ((UNIX_TIMESTAMP()- (15*60))*1000000);",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 800,
-        "y": 120,
-        "wires": [
-            [
-                "86854dec6a32348c"
-            ]
-        ]
-    },
-    {
-        "id": "88a116082b2069db",
-        "type": "mysql",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "mydb": "5339cbe2c181bca0",
-        "name": "Gyro",
-        "x": 1010,
-        "y": 300,
-        "wires": [
-            [
-                "0c6e37149820dd87",
-                "83d31e6da7493388"
-            ]
-        ]
-    },
-    {
-        "id": "98c8f6d95490ed29",
+        "id": "1d8a1338464cd5bb",
         "type": "debug",
-        "z": "9ae3b787b3ce34ed",
+        "z": "38a2cc4448c88130",
+        "g": "ebb7a525ca205a26",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1610,
-        "y": 200,
+        "x": 830,
+        "y": 480,
         "wires": []
     },
     {
-        "id": "58d483791ef466fa",
-        "type": "ui_date_picker",
-        "z": "9ae3b787b3ce34ed",
-        "g": "1522e062397f1cf8",
+        "id": "65497ab22283d6dc",
+        "type": "inject",
+        "z": "38a2cc4448c88130",
+        "g": "ebb7a525ca205a26",
+        "name": "get_latest_x_samples",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT timestamp, status FROM tracker_robot where limit 200;",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [
+                "5888120f3ed6205a"
+            ]
+        ]
+    },
+    {
+        "id": "4eedff0662e01bbc",
+        "type": "inject",
+        "z": "38a2cc4448c88130",
+        "g": "ebb7a525ca205a26",
+        "name": "get_number_of_samples_in_time_frame",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": " SELECT count(id) FROM tracker_robot WHERE timestamp >= ((UNIX_TIMESTAMP() - (1*3600))*1000);",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 580,
+        "wires": [
+            [
+                "5888120f3ed6205a"
+            ]
+        ]
+    },
+    {
+        "id": "a1b8bf4.8e82e4",
+        "type": "mqtt-broker",
         "name": "",
-        "label": "startDate",
-        "group": "f6bae4dbde7d9690",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "a03d1a27.84c4c8",
+        "type": "mqtt-broker",
+        "name": "iiot_case_2",
+        "broker": "10.3.141.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "4f1710704aaf6586",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "10.3.141.1",
+        "port": "3306",
+        "db": "iiot_lecture",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "d46f2737f65046e7",
+        "type": "ui_group",
+        "name": "iiot_lecture",
+        "tab": "3dba424aeb3b3bb6",
         "order": 1,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "topic": "startDate",
-        "topicType": "str",
-        "className": "",
-        "x": 360,
-        "y": 840,
-        "wires": [
-            [
-                "a90e80dcf73e41ca"
-            ]
-        ]
+        "disp": true,
+        "width": "14",
+        "collapse": false,
+        "className": ""
     },
     {
-        "id": "090fdfd29aabc4c0",
-        "type": "ui_date_picker",
-        "z": "9ae3b787b3ce34ed",
-        "g": "1522e062397f1cf8",
-        "name": "",
-        "label": "endDate",
-        "group": "f6bae4dbde7d9690",
-        "order": 4,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "topic": "endDate",
-        "topicType": "str",
-        "className": "",
-        "x": 360,
-        "y": 920,
-        "wires": [
-            [
-                "a90e80dcf73e41ca"
-            ]
-        ]
-    },
-    {
-        "id": "e29dda9f0ac61454",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "1522e062397f1cf8",
-        "name": "",
-        "func": "flow.set(\"startDate\", msg.payload.startDate);\nflow.set(\"startTime\", msg.payload.startTime);\nflow.set(\"endDate\", msg.payload.endDate);\nflow.set(\"endTime\", msg.payload.endTime);\n//set start and end point as a combination of start/end time and date.\nflow.set(\"startPoint\", (flow.get(\"startDate\")+flow.get(\"startTime\")-(2*3600000)));\nflow.set(\"endPoint\", (flow.get(\"endDate\")+flow.get(\"endTime\")-(2*3600000)));\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 720,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "207db2421f47fcdd",
-        "type": "ui_text_input",
-        "z": "9ae3b787b3ce34ed",
-        "g": "1522e062397f1cf8",
-        "name": "",
-        "label": "endTime",
-        "tooltip": "",
-        "group": "f6bae4dbde7d9690",
-        "order": 5,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "mode": "time",
-        "delay": 300,
-        "topic": "endTime",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "str",
-        "x": 360,
-        "y": 960,
-        "wires": [
-            [
-                "a90e80dcf73e41ca"
-            ]
-        ]
-    },
-    {
-        "id": "e14ecdd9709807db",
-        "type": "ui_text_input",
-        "z": "9ae3b787b3ce34ed",
-        "g": "1522e062397f1cf8",
-        "name": "",
-        "label": "startTime",
-        "tooltip": "",
-        "group": "f6bae4dbde7d9690",
-        "order": 2,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "mode": "time",
-        "delay": 300,
-        "topic": "startTime",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "str",
-        "x": 360,
-        "y": 880,
-        "wires": [
-            [
-                "a90e80dcf73e41ca"
-            ]
-        ]
-    },
-    {
-        "id": "a90e80dcf73e41ca",
-        "type": "join",
-        "z": "9ae3b787b3ce34ed",
-        "g": "1522e062397f1cf8",
-        "name": "",
-        "mode": "custom",
-        "build": "object",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": true,
-        "timeout": "",
-        "count": "4",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 550,
-        "y": 860,
-        "wires": [
-            [
-                "e29dda9f0ac61454"
-            ]
-        ]
-    },
-    {
-        "id": "39d0ae47d3f3a573",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "Query Tracker",
-        "func": "if(flow.get(\"startPoint\") > flow.get(\"endPoint\")){\n    msg.valid = false\n    msg.topic = 'Log-file end-point must be later than start-point!'\n    msg.timeout = 5;\n    return msg;\n}\n\nmsg.valid = true\n\nmsg.topic = `select status, timestamp FROM tracker2 where timestamp between \\'${flow.get(\"startPoint\")}\\' and \\'${flow.get(\"endPoint\")}\\' AND status = 1;`\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 860,
-        "y": 560,
-        "wires": [
-            [
-                "bf733c9263f98efe"
-            ]
-        ]
-    },
-    {
-        "id": "8b8ce5251dff3617",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "",
-        "func": "flow.set(\"accelLock\", false);",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1180,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "86854dec6a32348c",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "",
-        "func": "if (flow.get(\"accelLock\") === true){\n    return; //query is locked, do not send query\n} else if (flow.get(\"accelLock\") === false){\n    flow.set(\"accelLock\", true) \n    return msg; //query is unlocked, send query\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"accelLock\", false);",
-        "finalize": "",
-        "libs": [],
-        "x": 940,
-        "y": 200,
-        "wires": [
-            [
-                "16e8369141f4b7e9"
-            ]
-        ]
-    },
-    {
-        "id": "3ec3519d3d253771",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "name": "",
-        "func": "if (flow.get(\"gyroLock\") === true){\n    return; //query is locked, do not send query\n} else if (flow.get(\"gyroLock\") === false){\n    flow.set(\"gyroLock\", true) \n    return msg; //query is unlocked, send query\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"gyroLock\", false);",
-        "finalize": "",
-        "libs": [],
-        "x": 700,
-        "y": 360,
-        "wires": [
-            [
-                "88a116082b2069db"
-            ]
-        ]
-    },
-    {
-        "id": "83d31e6da7493388",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "e9f44dd3f0da4ed8",
-        "name": "",
-        "func": "flow.set(\"gyroLock\", false);",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1000,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bf733c9263f98efe",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "func": "if (flow.get(\"trackLock\") === true){\n    return; //query is locked, do not send query\n} else if (flow.get(\"trackLock\") === false){\n    flow.set(\"trackLock\", true) \n    return msg; //query is unlocked, send query\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set(\"trackLock\", false);",
-        "finalize": "",
-        "libs": [],
-        "x": 1000,
-        "y": 660,
-        "wires": [
-            [
-                "e4cbf7962b67bb96",
-                "6b57a7f919681f26"
-            ]
-        ]
-    },
-    {
-        "id": "8ec2ea9e49924843",
-        "type": "function",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "func": "flow.set(\"trackLock\", false);",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1160,
-        "y": 740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e5bc131ed831dc77",
-        "type": "inject",
-        "z": "9ae3b787b3ce34ed",
-        "d": true,
-        "g": "e9f44dd3f0da4ed8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "30",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 390,
-        "y": 220,
-        "wires": [
-            [
-                "a72af00f97037d49",
-                "36f25da69c5e0f2d",
-                "9567342f4afcb062",
-                "540ec11044caa9fe"
-            ]
-        ]
-    },
-    {
-        "id": "f147d4f09dae4e0b",
-        "type": "inject",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "5",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 390,
-        "y": 600,
-        "wires": [
-            [
-                "c714e7c84b869e73",
-                "ee3deac09322e15a"
-            ]
-        ]
-    },
-    {
-        "id": "6b57a7f919681f26",
-        "type": "debug",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1030,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "6d74e903f2567d55",
-        "type": "debug",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1270,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "cc577154cbd62f20",
-        "type": "debug",
-        "z": "9ae3b787b3ce34ed",
-        "g": "d26f64a14cd1dda5",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1570,
-        "y": 500,
-        "wires": []
+        "id": "3dba424aeb3b3bb6",
+        "type": "ui_tab",
+        "name": "IIoT Lecture",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     }
 ]
