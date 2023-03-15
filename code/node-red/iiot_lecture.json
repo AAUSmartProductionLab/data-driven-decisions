@@ -122,6 +122,50 @@
         "h": 202
     },
     {
+        "id": "f70f673fa8663fd1",
+        "type": "group",
+        "z": "9cca74f7daa9ecda",
+        "name": "Dashboard Example",
+        "style": {
+            "fill": "#3f93cf",
+            "label": true,
+            "stroke": "#000000",
+            "color": "#000000"
+        },
+        "nodes": [
+            "0dc8c8369ed6b2a6",
+            "93508545af719a94",
+            "a226c8df54102e02"
+        ],
+        "x": 174,
+        "y": 299,
+        "w": 552,
+        "h": 82
+    },
+    {
+        "id": "83ffc87ad65781f8",
+        "type": "group",
+        "z": "9cca74f7daa9ecda",
+        "name": "SQL Query Example",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#addb7b",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "a3c950b0d622290b",
+            "17b8e86158f8a2ab",
+            "dd016511f851538f",
+            "30561d6d8f744e3d",
+            "155620183b05170e"
+        ],
+        "x": 34,
+        "y": 59,
+        "w": 892,
+        "h": 202
+    },
+    {
         "id": "42815bc7b17207f9",
         "type": "mqtt-broker",
         "name": "iiotcase2-broker",
@@ -491,6 +535,25 @@
         "className": ""
     },
     {
+        "id": "ee2619d21e981d59",
+        "type": "ui_tab",
+        "name": "IIoT Lecture",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "46ea661772b12a89",
+        "type": "ui_group",
+        "name": "iiot_lecture",
+        "tab": "ee2619d21e981d59",
+        "order": 1,
+        "disp": true,
+        "width": "14",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "09f5d365f60256ce",
         "type": "mqtt in",
         "z": "ee88810d3b61b021",
@@ -637,6 +700,7 @@
         "id": "a3c950b0d622290b",
         "type": "mysql",
         "z": "9cca74f7daa9ecda",
+        "g": "83ffc87ad65781f8",
         "mydb": "5339cbe2c181bca0",
         "name": "",
         "x": 550,
@@ -651,6 +715,7 @@
         "id": "17b8e86158f8a2ab",
         "type": "inject",
         "z": "9cca74f7daa9ecda",
+        "g": "83ffc87ad65781f8",
         "name": "get_data_from_time",
         "props": [
             {
@@ -680,6 +745,7 @@
         "id": "dd016511f851538f",
         "type": "debug",
         "z": "9cca74f7daa9ecda",
+        "g": "83ffc87ad65781f8",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -696,6 +762,7 @@
         "id": "30561d6d8f744e3d",
         "type": "inject",
         "z": "9cca74f7daa9ecda",
+        "g": "83ffc87ad65781f8",
         "name": "get_latest_x_samples",
         "props": [
             {
@@ -725,6 +792,7 @@
         "id": "155620183b05170e",
         "type": "inject",
         "z": "9cca74f7daa9ecda",
+        "g": "83ffc87ad65781f8",
         "name": "get_number_of_samples_in_time_frame",
         "props": [
             {
@@ -747,6 +815,78 @@
         "wires": [
             [
                 "a3c950b0d622290b"
+            ]
+        ]
+    },
+    {
+        "id": "0dc8c8369ed6b2a6",
+        "type": "ui_button",
+        "z": "9cca74f7daa9ecda",
+        "g": "f70f673fa8663fd1",
+        "name": "",
+        "group": "46ea661772b12a89",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": " SELECT count(id) FROM tracker_top_cover WHERE timestamp >= ((UNIX_TIMESTAMP() - (1*3600))*1000);",
+        "topicType": "str",
+        "x": 260,
+        "y": 340,
+        "wires": [
+            [
+                "a226c8df54102e02"
+            ]
+        ]
+    },
+    {
+        "id": "93508545af719a94",
+        "type": "ui_gauge",
+        "z": "9cca74f7daa9ecda",
+        "g": "f70f673fa8663fd1",
+        "name": "",
+        "group": "46ea661772b12a89",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Unit Count (1 hour)",
+        "label": "units",
+        "format": "{{msg.payload[0][\"count(id)\"]}}",
+        "min": 0,
+        "max": "300",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#00ff00"
+        ],
+        "seg1": "50",
+        "seg2": "200",
+        "className": "",
+        "x": 610,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a226c8df54102e02",
+        "type": "mysql",
+        "z": "9cca74f7daa9ecda",
+        "g": "f70f673fa8663fd1",
+        "mydb": "5339cbe2c181bca0",
+        "name": "",
+        "x": 410,
+        "y": 340,
+        "wires": [
+            [
+                "93508545af719a94"
             ]
         ]
     },
