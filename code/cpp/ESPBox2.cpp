@@ -198,19 +198,9 @@ void loop() {
   }
 
   client.loop();
-  imu();
+
   lineTracker();
 
-  currentMillis = millis();
-
-    if ((currentMillis-startMillis) >= period){
-      lightSensor();
-      delay(10);
-      currentMillis = 0;
-      startMillis = millis();
-    }
-  
   delay(500);
 
-  //ESP.deepSleep(10e6);
 }
